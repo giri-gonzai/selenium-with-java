@@ -1,0 +1,56 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="All-Tests" verbose="1">
+
+	<test name="Login_Tests">
+		<parameter name="username" value="tomsmith" />
+		<parameter name="password" value="SuperSecretPassword!" />
+		<groups>
+			<run>
+				<include name="positiveTest , smokeTest " />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.herokuapp.theinternet.Login_Tests">
+				<methods>
+					<include name="positive_LoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login_Negative_Username_Test">
+		<parameter name="username" value="incorrect" />
+		<parameter name="password" value="SuperSecretPassword!" />
+		<groups>
+			<run>
+				<include name="negativeTest , smokeTest" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.herokuapp.theinternet.Login_Tests">
+				<methods>
+					<include name="negative_LoginTest_Incorrect_Username" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login_Negative_Password_Test">
+		<parameter name="username" value="tomsmith" />
+		<parameter name="password" value="SuperSecretPassword" />
+		<groups>
+			<run>
+				<include name="negativeTest , smokeTest" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.herokuapp.theinternet.Login_Tests">
+				<methods>
+					<include name="negative_LoginTest_Incorrect_Password" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

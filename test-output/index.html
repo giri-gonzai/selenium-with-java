@@ -49,17 +49,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-All_Tests" class="navigator-link ">
-                    <span>testng.xml</span>
+                    <span>LoginTestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-All_Tests" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-All_Tests" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,17 @@
                     <div class="method-list-content passed suite-All_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Test_Negative" class="method navigator-link" hash-for-method="incorrect_username_test">incorrect_username_test</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Tests" class="method navigator-link" hash-for-method="negative_LoginTest_Incorrect_Password(tomsmith, SuperSecretPassword)">negative_LoginTest_Incorrect_Password(tomsmith, SuperSecretPassword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Test_Positive" class="method navigator-link" hash-for-method="login_Test(tomsmith, SuperSecretPassword!)">login_Test(tomsmith, SuperSecretPassword!)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Tests" class="method navigator-link" hash-for-method="negative_LoginTest_Incorrect_Username(incorrect, SuperSecretPassword!)">negative_LoginTest_Incorrect_Username(incorrect, SuperSecretPassword!)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Tests" class="method navigator-link" hash-for-method="positive_LoginTest(tomsmith, SuperSecretPassword!)">positive_LoginTest(tomsmith, SuperSecretPassword!)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Tests -->
@@ -125,29 +130,30 @@
           <div class="suite-All_Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.herokuapp.theinternet.Login_Test_Negative</span>
+              <span class="class-name">com.herokuapp.theinternet.Login_Tests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="incorrect_username_test">
-                  </a> <!-- incorrect_username_test -->
-                  <span class="method-name">incorrect_username_test</span>
+                  <a name="negative_LoginTest_Incorrect_Password(tomsmith, SuperSecretPassword)">
+                  </a> <!-- negative_LoginTest_Incorrect_Password(tomsmith, SuperSecretPassword) -->
+                  <span class="method-name">negative_LoginTest_Incorrect_Password</span>
+                  <span class="parameters">(tomsmith, SuperSecretPassword)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Tests-class-passed -->
-          <div class="suite-All_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.herokuapp.theinternet.Login_Test_Positive</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login_Test(tomsmith, SuperSecretPassword!)">
-                  </a> <!-- login_Test(tomsmith, SuperSecretPassword!) -->
-                  <span class="method-name">login_Test</span>
+                  <a name="negative_LoginTest_Incorrect_Username(incorrect, SuperSecretPassword!)">
+                  </a> <!-- negative_LoginTest_Incorrect_Username(incorrect, SuperSecretPassword!) -->
+                  <span class="method-name">negative_LoginTest_Incorrect_Username</span>
+                  <span class="parameters">(incorrect, SuperSecretPassword!)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="positive_LoginTest(tomsmith, SuperSecretPassword!)">
+                  </a> <!-- positive_LoginTest(tomsmith, SuperSecretPassword!) -->
+                  <span class="method-name">positive_LoginTest</span>
                   <span class="parameters">(tomsmith, SuperSecretPassword!)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -156,30 +162,61 @@
         </div> <!-- panel All_Tests -->
         <div panel-name="test-xml-All_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/giri/eclipse-workspace/selenium-with-java/src/test/resources/TestSuites/testng.xml</span>
+            <span class="header-content">/Users/giri/eclipse-workspace/selenium-with-java/src/test/resources/TestSuites/LoginTestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All-Tests&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPassword!&quot;/&gt;
-  &lt;parameter name=&quot;username&quot; value=&quot;tomsmith&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login_Test_Positive&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login_Tests&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPassword!&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;tomsmith&quot;/&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;smokeTest&quot;/&gt;
+        &lt;include name=&quot;positiveTest , smokeTest &quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.herokuapp.theinternet.Login_Test_Positive&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.Login_Tests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;positive_LoginTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.Login_Tests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login_Test_Positive --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login_Test_Negative&quot;&gt;
+  &lt;/test&gt; &lt;!-- Login_Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login_Negative_Username_Test&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPassword!&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;incorrect&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;negativeTest , smokeTest&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.herokuapp.theinternet.Login_Test_Negative&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.Login_Tests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;negative_LoginTest_Incorrect_Username&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.Login_Tests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login_Test_Negative --&gt;
+  &lt;/test&gt; &lt;!-- Login_Negative_Username_Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login_Negative_Password_Test&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPassword&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;tomsmith&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;negativeTest , smokeTest&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.Login_Tests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;negative_LoginTest_Incorrect_Password&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.Login_Tests --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login_Negative_Password_Test --&gt;
 &lt;/suite&gt; &lt;!-- All-Tests --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,10 +228,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login_Test_Positive (1 class)</span>
+                <span class="test-name">Login_Tests (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Login_Test_Negative (1 class)</span>
+                <span class="test-name">Login_Negative_Username_Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login_Negative_Password_Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,10 +245,38 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">negativeTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">negative_LoginTest_Incorrect_Password</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">negative_LoginTest_Incorrect_Username</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">positiveTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">positive_LoginTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">smokeTest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">login_Test</span>
+                <span class="method-in-group-name">negative_LoginTest_Incorrect_Password</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">negative_LoginTest_Incorrect_Username</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">positive_LoginTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -228,20 +296,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'incorrect_username_test')
-data.setCell(0, 2, 'com.herokuapp.theinternet.Login_Test_Negative')
-data.setCell(0, 3, 10561);
+data.setCell(0, 1, 'negative_LoginTest_Incorrect_Password')
+data.setCell(0, 2, 'com.herokuapp.theinternet.Login_Tests')
+data.setCell(0, 3, 7153);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login_Test')
-data.setCell(1, 2, 'com.herokuapp.theinternet.Login_Test_Positive')
-data.setCell(1, 3, 8633);
+data.setCell(1, 1, 'positive_LoginTest')
+data.setCell(1, 2, 'com.herokuapp.theinternet.Login_Tests')
+data.setCell(1, 3, 7040);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'negative_LoginTest_Incorrect_Username')
+data.setCell(2, 2, 'com.herokuapp.theinternet.Login_Tests')
+data.setCell(2, 3, 5977);
 window.suiteTableData['All_Tests']= { tableData: data, tableDiv: 'times-div-All_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-All_Tests">
               </div> <!-- times-div-All_Tests -->
             </div> <!-- times-div -->
@@ -256,13 +328,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.herokuapp.theinternet.Login_Test_Negative</span>
+              <span class="ignored-class-name">com.herokuapp.theinternet.Login_Tests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">incorrect_password_test</span>
+                <span class="ignored-method-name">positive_LoginTest</span>
+                <br/>
+                <span class="ignored-method-name">positive_LoginTest</span>
+                <br/>
+                <span class="ignored-method-name">negative_LoginTest_Incorrect_Password</span>
+                <br/>
+                <span class="ignored-method-name">negative_LoginTest_Incorrect_Password</span>
+                <br/>
+                <span class="ignored-method-name">negative_LoginTest_Incorrect_Username</span>
+                <br/>
+                <span class="ignored-method-name">negative_LoginTest_Incorrect_Username</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -274,17 +356,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.herokuapp.theinternet.Login_Test_Positive</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.herokuapp.theinternet.Login_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">login_Test(tomsmith, SuperSecretPassword!)</span>
+                <span class="method-name">positive_LoginTest(tomsmith, SuperSecretPassword!)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.herokuapp.theinternet.Login_Test_Negative</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">incorrect_username_test</span>
-                <span class="method-start">8687 ms</span>
+                <span class="method-name">negative_LoginTest_Incorrect_Username(incorrect, SuperSecretPassword!)</span>
+                <span class="method-start">7441 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">negative_LoginTest_Incorrect_Password(tomsmith, SuperSecretPassword)</span>
+                <span class="method-start">13428 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
