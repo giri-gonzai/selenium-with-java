@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.herokuapp.theinternet.Login_Test_Positive" time="9.632" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="23.593" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="webdriver.chrome.driver" value="src/main/resources/chromedriver"/>
@@ -14,10 +14,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NZ"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/giri/eclipse-workspace/selenium-with-java/target/surefire/surefirebooter1169461965745305862.jar /Users/giri/eclipse-workspace/selenium-with-java/target/surefire 2019-12-09T16-29-40_719-jvmRun1 surefire13267406969752593121tmp surefire_05056636985742561921tmp"/>
+    <property name="sun.java.command" value="/Users/giri/eclipse-workspace/selenium-with-java/target/surefire/surefirebooter12741069345731733802.jar /Users/giri/eclipse-workspace/selenium-with-java/target/surefire 2019-12-09T17-48-47_151-jvmRun1 surefire14280857956762841513tmp surefire_016376428896029276661tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="Login_Test_Positive"/>
     <property name="surefire.test.class.path" value="/Users/giri/eclipse-workspace/selenium-with-java/target/test-classes:/Users/giri/eclipse-workspace/selenium-with-java/target/classes:/Users/giri/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/giri/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/giri/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/giri/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/giri/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/giri/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/giri/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/giri/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/giri/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/giri/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/giri/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/giri/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/giri/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/giri"/>
@@ -29,9 +28,9 @@
     <property name="basedir" value="/Users/giri/eclipse-workspace/selenium-with-java"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/giri/eclipse-workspace/selenium-with-java/target/surefire/surefirebooter1169461965745305862.jar"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/giri/eclipse-workspace/selenium-with-java/target/surefire/surefirebooter12741069345731733802.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="13.0.1+9"/>
@@ -56,5 +55,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="login_Test" classname="com.herokuapp.theinternet.Login_Test_Positive" time="9.341"/>
+  <testcase name="login_Test" classname="com.herokuapp.theinternet.Login_Test_Positive" time="11.555"/>
+  <testcase name="incorrect_password_test" classname="com.herokuapp.theinternet.Login_Test_Negative" time="5.836"/>
+  <testcase name="incorrect_username_test" classname="com.herokuapp.theinternet.Login_Test_Negative" time="5.849"/>
 </testsuite>
