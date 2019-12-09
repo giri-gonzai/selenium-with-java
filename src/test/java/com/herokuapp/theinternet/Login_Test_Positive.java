@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class Login_Test_Positive {
 	
-	@Test
+	@Test(priority = 1)
 	public void login_Test() {
 		
 		//Create Browser Driver

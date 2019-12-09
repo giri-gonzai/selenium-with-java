@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 @Test
 public class Login_Test_Negative {
 
-	
 	public void incorrect_username_test() {
 
 		// Create Browser Driver
@@ -52,7 +51,7 @@ public class Login_Test_Negative {
 		driver.quit();
 	}
 
-
+	@Test(enabled = false)
 	public void incorrect_password_test() {
 
 		// Create Browser Driver

@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-All_Tests" class="show-methods passed suite-All_Tests"> (show)</a> <!-- show-methods passed suite-All_Tests -->
                     </span>
                     <div class="method-list-content passed suite-All_Tests">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Test_Negative" class="method navigator-link" hash-for-method="incorrect_password_test">incorrect_password_test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Tests" title="com.herokuapp.theinternet.Login_Test_Negative" class="method navigator-link" hash-for-method="incorrect_username_test">incorrect_username_test</a> <!-- method navigator-link -->
@@ -133,13 +128,6 @@
               <span class="class-name">com.herokuapp.theinternet.Login_Test_Negative</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="incorrect_password_test">
-                  </a> <!-- incorrect_password_test -->
-                  <span class="method-name">incorrect_password_test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="incorrect_username_test">
@@ -224,24 +212,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'incorrect_password_test')
-data.setCell(0, 2, 'com.herokuapp.theinternet.Login_Test_Negative')
-data.setCell(0, 3, 12042);
+data.setCell(0, 1, 'login_Test')
+data.setCell(0, 2, 'com.herokuapp.theinternet.Login_Test_Positive')
+data.setCell(0, 3, 9989);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login_Test')
-data.setCell(1, 2, 'com.herokuapp.theinternet.Login_Test_Positive')
-data.setCell(1, 3, 6904);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'incorrect_username_test')
-data.setCell(2, 2, 'com.herokuapp.theinternet.Login_Test_Negative')
-data.setCell(2, 3, 6377);
+data.setCell(1, 1, 'incorrect_username_test')
+data.setCell(1, 2, 'com.herokuapp.theinternet.Login_Test_Negative')
+data.setCell(1, 3, 6918);
 window.suiteTableData['All_Tests']= { tableData: data, tableDiv: 'times-div-All_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-All_Tests">
               </div> <!-- times-div-All_Tests -->
             </div> <!-- times-div -->
@@ -256,9 +240,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.herokuapp.theinternet.Login_Test_Negative</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">incorrect_password_test</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-All_Tests" class="panel">
@@ -276,12 +267,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.Login_Test_Negative</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">incorrect_password_test</span>
-                <span class="method-start">6966 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">incorrect_username_test</span>
-                <span class="method-start">19010 ms</span>
+                <span class="method-start">10319 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
