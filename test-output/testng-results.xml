@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-12-09T17:04:50 NZDT" name="Default suite" finished-at="2019-12-09T17:04:59 NZDT" duration-ms="9417">
+    <groups>
+    </groups>
+    <test started-at="2019-12-09T17:04:50 NZDT" name="Default test" finished-at="2019-12-09T17:04:59 NZDT" duration-ms="9417">
+      <class name="com.herokuapp.theinternet.Login_Test_Negative">
+        <test-method signature="login_negative_test()[pri:0, instance:com.herokuapp.theinternet.Login_Test_Negative@8e0379d]" started-at="2019-12-09T17:04:50 NZDT" name="login_negative_test" finished-at="2019-12-09T17:04:59 NZDT" duration-ms="9383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_negative_test -->
+      </class> <!-- com.herokuapp.theinternet.Login_Test_Negative -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
