@@ -1,8 +1,13 @@
 package com.herokuapp.theinternet;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -24,11 +29,14 @@ public class Login_Tests {
 		System.out.println("Starting test method: login_Test");
 		driver.get("https://the-internet.herokuapp.com/");
 		driver.manage().window().maximize();
+
+		// Implicit Wait
+		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	@AfterMethod(alwaysRun = true)
 	private void closeUp() {
-		
+
 		// Closer Browser Instance
 		driver.quit();
 	}
@@ -50,8 +58,12 @@ public class Login_Tests {
 		System.out.println("Entering Password");
 		driver.findElement(By.id("password")).sendKeys(password);
 
+		// Explicit Wait
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+
 		// Click Login
 		System.out.println("Click Login Button");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")));
 		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
 
 		// Verification Steps
@@ -67,9 +79,6 @@ public class Login_Tests {
 		// Verify the 'Logout' button
 		System.out.println("Verifying the logout button");
 		driver.findElement(By.xpath("//a[@class='button secondary radius']")).isDisplayed();
-
-		// Close Browser
-		driver.quit();
 
 		// Advanced Verification
 		// Check the HTTP Response of the Successful login page
@@ -116,8 +125,6 @@ public class Login_Tests {
 		System.out.println("Verifying the incorrect login message");
 		driver.findElement(By.xpath("//div[@class='flash error']")).isDisplayed();
 
-		// Closer Browser Instance
-		driver.quit();
 	}
 
 	@Parameters({ "username", "password" })
