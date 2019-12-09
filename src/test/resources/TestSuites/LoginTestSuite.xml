@@ -13,7 +13,7 @@
 		<classes>
 			<class name="com.herokuapp.theinternet.Login_Tests">
 				<methods>
-					<include name="positive_LoginTest"></include>
+					<include name="positive_LoginTest" />
 				</methods>
 			</class>
 		</classes>
