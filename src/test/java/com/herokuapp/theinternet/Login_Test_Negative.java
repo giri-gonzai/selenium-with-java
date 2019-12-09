@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class Login_Test_Negative {
 
-	@Test(groups = { "smokeTest" })
+	@Test(/*groups = { "smokeTest" }*/)
 	public void incorrect_username_test() {
 
 		// Create Browser Driver

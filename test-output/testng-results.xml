@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-09T18:22:27 NZDT" name="All-Tests" finished-at="2019-12-09T18:22:37 NZDT" duration-ms="9937">
+  <suite started-at="2019-12-09T18:55:21 NZDT" name="All-Tests" finished-at="2019-12-09T18:55:41 NZDT" duration-ms="19279">
     <groups>
       <group name="smokeTest">
-        <method signature="Login_Test_Negative.incorrect_username_test()[pri:0, instance:com.herokuapp.theinternet.Login_Test_Negative@3b938003]" name="incorrect_username_test" class="com.herokuapp.theinternet.Login_Test_Negative"/>
+        <method signature="Login_Test_Positive.login_Test(java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.Login_Test_Positive@25b485ba]" name="login_Test" class="com.herokuapp.theinternet.Login_Test_Positive"/>
       </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2019-12-09T18:22:27 NZDT" name="Login_Test_Positive" finished-at="2019-12-09T18:22:27 NZDT" duration-ms="8">
+    <test started-at="2019-12-09T18:55:21 NZDT" name="Login_Test_Positive" finished-at="2019-12-09T18:55:30 NZDT" duration-ms="8668">
+      <class name="com.herokuapp.theinternet.Login_Test_Positive">
+        <test-method signature="login_Test(java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.theinternet.Login_Test_Positive@25b485ba]" started-at="2019-12-09T18:55:21 NZDT" name="login_Test" finished-at="2019-12-09T18:55:30 NZDT" duration-ms="8633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_Test -->
+      </class> <!-- com.herokuapp.theinternet.Login_Test_Positive -->
     </test> <!-- Login_Test_Positive -->
-    <test started-at="2019-12-09T18:22:27 NZDT" name="Login_Test_Negative" finished-at="2019-12-09T18:22:37 NZDT" duration-ms="9676">
+    <test started-at="2019-12-09T18:55:30 NZDT" name="Login_Test_Negative" finished-at="2019-12-09T18:55:41 NZDT" duration-ms="10565">
       <class name="com.herokuapp.theinternet.Login_Test_Negative">
-        <test-method signature="incorrect_username_test()[pri:0, instance:com.herokuapp.theinternet.Login_Test_Negative@3b938003]" started-at="2019-12-09T18:22:27 NZDT" name="incorrect_username_test" finished-at="2019-12-09T18:22:37 NZDT" duration-ms="9651" status="PASS">
+        <test-method signature="incorrect_username_test()[pri:0, instance:com.herokuapp.theinternet.Login_Test_Negative@475e586c]" started-at="2019-12-09T18:55:30 NZDT" name="incorrect_username_test" finished-at="2019-12-09T18:55:41 NZDT" duration-ms="10561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- incorrect_username_test -->

@@ -4,13 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
 public class Login_Test_Positive {
 	
+	@Parameters({ "username", "password" })
 	@Test(priority = 1, groups = { "smokeTest" })
-	public void login_Test() {
+	public void login_Test(String  username, String password) {
 		
 		//Create Browser Driver
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
@@ -28,11 +30,11 @@ public class Login_Test_Positive {
 		
 		//Enter Username
 		System.out.println("Entering Username");
-		driver.findElement(By.id("username")).sendKeys("tomsmith");
+		driver.findElement(By.id("username")).sendKeys(username);
 		
 		//Enter Password
 		System.out.println("Entering Password");
-		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+		driver.findElement(By.id("password")).sendKeys(password);
 		
 		//Click Login
 		System.out.println("Click Login Button");
