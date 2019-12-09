@@ -6,9 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-@Test
+
 public class Login_Test_Negative {
 
+	@Test(groups = { "smokeTest" })
 	public void incorrect_username_test() {
 
 		// Create Browser Driver
