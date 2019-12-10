@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [All-Exception-Tests]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Login_Exception_Tests(failed)">
+  <test thread-count="5" name="Dynamic_Logout_Timeout(failed)">
     <classes>
       <class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
         <methods>
@@ -11,5 +11,5 @@
         </methods>
       </class> <!-- com.herokuapp.theinternet.Login_Exceptions_Tests -->
     </classes>
-  </test> <!-- Login_Exception_Tests(failed) -->
+  </test> <!-- Dynamic_Logout_Timeout(failed) -->
 </suite> <!-- Failed suite [All-Exception-Tests] -->

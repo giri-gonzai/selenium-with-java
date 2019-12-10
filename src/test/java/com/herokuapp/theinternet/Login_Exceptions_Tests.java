@@ -36,27 +36,28 @@ public class Login_Exceptions_Tests {
 		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
-	/*
-	 * @Test public void dynamic_Loading() {
-	 * 
-	 * // Navigate to Dynamic Loading page driver.findElement(By.xpath(
-	 * "//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
-	 * 
-	 * // Navigate to Locator Page driver.findElement(By.xpath(
-	 * "//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
-	 * 
-	 * // Locate the Start button
-	 * driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
-	 * 
-	 * // Verify the 'Hello World' WebElement finishElement =
-	 * driver.findElement(By.id("finish"));
-	 * 
-	 * // Explicit Wait WebDriverWait wait = new WebDriverWait(driver, 10);
-	 * wait.until(ExpectedConditions.visibilityOf(finishElement)); String finishText
-	 * = finishElement.getText(); Assert.assertEquals(finishText, "Hello World!" ,
-	 * "Exception: The actual value is not as the expected value"); }
-	 */
-	
+	@Test
+	public void dynamic_Loading() {
+
+		// Navigate to Dynamic Loading page
+		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
+
+		// Navigate to Locator Page
+		driver.findElement(By.xpath("//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
+
+		// Locate the Start button
+		driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
+
+		// Verify the 'Hello World'
+		WebElement finishElement = driver.findElement(By.id("finish"));
+
+		// Explicit Wait
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(finishElement));
+		String finishText = finishElement.getText();
+		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
+	}
+
 	@Test
 	public void dynamic_Loading_Timeout() {
 
@@ -80,7 +81,30 @@ public class Login_Exceptions_Tests {
 			System.out.println("Timeout Exception captured: " + exception.getMessage());
 		}
 		String finishText = finishElement.getText();
-		Assert.assertEquals(finishText, "Hello World!" , "Exception: The actual value is not as the expected value");
+		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
+	}
+
+	@Test(groups = {"exception-tests"})
+	public void stale_Element_Test_Exception() {
+
+		// Navigating to Dynamic Control Page
+		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
+
+		// Locator for Checkbox
+		WebElement checkboxElement = driver.findElement(By.id("checkbox"));
+		checkboxElement.click();
+
+		// Locator for Button
+		driver.findElement(By.xpath("//form[@id='checkbox-example']/button[@type='button']")).click();
+
+		// Explicit Wait - Using invisibilityof for which test will continue when the
+		// element becomes invisible within given time
+		WebDriverWait wait = new WebDriverWait(driver, 2);
+		try {
+			wait.until(ExpectedConditions.invisibilityOf(checkboxElement));
+		} catch (TimeoutException exception) {
+			System.out.println("Timeout Exception captured: " + exception.getMessage());
+		}
 	}
 
 	@AfterMethod(alwaysRun = true)

@@ -3,23 +3,40 @@
 <suite name="All-Exception-Tests" verbose="1">
 
 	<test name="Login_Exception_Tests">
-		<!-- <groups>
+		<groups>
 			<run>
 				<include name="positiveTest , smokeTest " />
 			</run>
-		</groups> -->
-		<!-- <classes>
+		</groups>
+		<classes>
 			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
 				<methods>
 					<include name="dynamic_Loading" />
 				</methods>
 			</class>
-		</classes> -->
-		
+		</classes>
+	</test>
+
+	<test name="Dynamic_Logout_Timeout">
 		<classes>
 			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
 				<methods>
 					<include name="dynamic_Loading_Timeout" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Stale_Element_Exception">
+		<groups>
+			<run>
+				<include name="exception-tests" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
+				<methods>
+					<include name="stale_Element_Test_Exception" />
 				</methods>
 			</class>
 		</classes>
