@@ -84,7 +84,7 @@ public class Login_Exceptions_Tests {
 		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
 	}
 
-	@Test(groups = {"exception-tests"})
+	@Test(groups = { "exception-tests" })
 	public void stale_Element_Test_Exception() {
 
 		// Navigating to Dynamic Control Page
@@ -99,12 +99,14 @@ public class Login_Exceptions_Tests {
 
 		// Explicit Wait - Using invisibilityof for which test will continue when the
 		// element becomes invisible within given time
-		WebDriverWait wait = new WebDriverWait(driver, 2);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
-			wait.until(ExpectedConditions.invisibilityOf(checkboxElement));
+			// wait.until(ExpectedConditions.invisibilityOf(checkboxElement));
+			Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
 		} catch (TimeoutException exception) {
 			System.out.println("Timeout Exception captured: " + exception.getMessage());
 		}
+
 	}
 
 	@AfterMethod(alwaysRun = true)
