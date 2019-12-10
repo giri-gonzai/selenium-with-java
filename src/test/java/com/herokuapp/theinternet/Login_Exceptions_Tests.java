@@ -102,12 +102,39 @@ public class Login_Exceptions_Tests {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
 			// wait.until(ExpectedConditions.invisibilityOf(checkboxElement));
-			//Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+			// Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
 			Assert.assertTrue(wait.until(ExpectedConditions.stalenessOf(checkboxElement)));
 		} catch (TimeoutException exception) {
 			System.out.println("Timeout Exception captured: " + exception.getMessage());
 		}
 
+		WebElement addElement = driver.findElement(By.xpath("//form[@id='checkbox-example']/button[@type='button']"));
+		addElement.click();
+
+		Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+	}
+
+	@Test
+	public void disabled_Element_Exception() {
+
+		// Navigating to Dynamic Control Page
+		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
+
+		// Locator for Checkbox
+		WebElement checkboxElement = driver.findElement(By.id("checkbox"));
+		checkboxElement.click();
+		
+		//Verify the text field is disabled
+		
+		//Click on Enable button
+		
+		//Wait for the text field to be enabled
+		
+		//Verify the text field is enabled
+		
+		//Input text into enabled text field
+		
+		//Verify the text by getText() against the entered text
 	}
 
 	@AfterMethod(alwaysRun = true)
