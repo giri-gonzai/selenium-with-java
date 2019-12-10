@@ -5,8 +5,8 @@
     <classes>
       <class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
         <methods>
+          <include name="dynamic_Loading_Timeout"/>
           <include name="closeUp"/>
-          <include name="dynamic_Loading"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.Login_Exceptions_Tests -->

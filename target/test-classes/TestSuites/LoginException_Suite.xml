@@ -8,10 +8,18 @@
 				<include name="positiveTest , smokeTest " />
 			</run>
 		</groups> -->
-		<classes>
+		<!-- <classes>
 			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
 				<methods>
 					<include name="dynamic_Loading" />
+				</methods>
+			</class>
+		</classes> -->
+		
+		<classes>
+			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
+				<methods>
+					<include name="dynamic_Loading_Timeout" />
 				</methods>
 			</class>
 		</classes>
