@@ -2,23 +2,23 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-10T20:16:52 NZDT" name="All-Exception-Tests" finished-at="2019-12-10T20:17:04 NZDT" duration-ms="12112">
+  <suite started-at="2019-12-10T20:23:09 NZDT" name="All-Exception-Tests" finished-at="2019-12-10T20:23:18 NZDT" duration-ms="8879">
     <groups>
       <group name="exception-tests">
         <method signature="Login_Exceptions_Tests.stale_Element_Test_Exception()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" name="stale_Element_Test_Exception" class="com.herokuapp.theinternet.Login_Exceptions_Tests"/>
       </group> <!-- exception-tests -->
     </groups>
-    <test started-at="2019-12-10T20:16:52 NZDT" name="Stale_Element_Exception" finished-at="2019-12-10T20:17:04 NZDT" duration-ms="12112">
+    <test started-at="2019-12-10T20:23:09 NZDT" name="Stale_Element_Exception" finished-at="2019-12-10T20:23:18 NZDT" duration-ms="8879">
       <class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:16:52 NZDT" name="setUp" finished-at="2019-12-10T20:17:00 NZDT" duration-ms="7675" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:23:09 NZDT" name="setUp" finished-at="2019-12-10T20:23:13 NZDT" duration-ms="4722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="stale_Element_Test_Exception()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:17:00 NZDT" name="stale_Element_Test_Exception" finished-at="2019-12-10T20:17:04 NZDT" duration-ms="4316" status="PASS">
+        <test-method signature="stale_Element_Test_Exception()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:23:13 NZDT" name="stale_Element_Test_Exception" finished-at="2019-12-10T20:23:17 NZDT" duration-ms="4042" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stale_Element_Test_Exception -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:17:04 NZDT" name="closeUp" finished-at="2019-12-10T20:17:04 NZDT" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.Login_Exceptions_Tests@780cb77]" started-at="2019-12-10T20:23:17 NZDT" name="closeUp" finished-at="2019-12-10T20:23:18 NZDT" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->

@@ -102,7 +102,8 @@ public class Login_Exceptions_Tests {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
 			// wait.until(ExpectedConditions.invisibilityOf(checkboxElement));
-			Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+			//Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+			Assert.assertTrue(wait.until(ExpectedConditions.stalenessOf(checkboxElement)));
 		} catch (TimeoutException exception) {
 			System.out.println("Timeout Exception captured: " + exception.getMessage());
 		}
