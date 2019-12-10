@@ -53,8 +53,8 @@ public class Login_Exceptions_Tests {
 		// Explicit Wait
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(finishElement));
-		//String finishText = finishElement.getText();
-		//Assert.assertSame("Hello World!", finishText, "Exception: The actual value is not as the expected value");
+		String finishText = finishElement.getText();
+		Assert.assertEquals(finishText, "Hello World!" , "Exception: The actual value is not as the expected value");
 	}
 
 	@AfterMethod(alwaysRun = true)
