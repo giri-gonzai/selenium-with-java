@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-All_Exception_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Exception_Tests" title="com.herokuapp.theinternet.Login_Exceptions_Tests" class="method navigator-link" hash-for-method="stale_Element_Test_Exception">stale_Element_Test_Exception</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Exception_Tests" title="com.herokuapp.theinternet.Login_Exceptions_Tests" class="method navigator-link" hash-for-method="disabled_Element_Exception">disabled_Element_Exception</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Exception_Tests -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="stale_Element_Test_Exception">
-                  </a> <!-- stale_Element_Test_Exception -->
-                  <span class="method-name">stale_Element_Test_Exception</span>
+                  <a name="disabled_Element_Exception">
+                  </a> <!-- disabled_Element_Exception -->
+                  <span class="method-name">disabled_Element_Exception</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,13 +145,13 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Stale_Element_Exception&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;exception-tests&quot;/&gt;
+        &lt;include name=&quot;disabled-exception-tests&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.Login_Exceptions_Tests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;stale_Element_Test_Exception&quot;/&gt;
+          &lt;include name=&quot;disabled_Element_Exception&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.Login_Exceptions_Tests --&gt;
     &lt;/classes&gt;
@@ -178,10 +178,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">exception-tests</span>
+              <span class="test-group-name">disabled-exception-tests</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">stale_Element_Test_Exception</span>
+                <span class="method-in-group-name">disabled_Element_Exception</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -203,14 +203,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'stale_Element_Test_Exception')
+data.setCell(0, 1, 'disabled_Element_Exception')
 data.setCell(0, 2, 'com.herokuapp.theinternet.Login_Exceptions_Tests')
-data.setCell(0, 3, 3879);
+data.setCell(0, 3, 4280);
 window.suiteTableData['All_Exception_Tests']= { tableData: data, tableDiv: 'times-div-All_Exception_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-All_Exception_Tests">
               </div> <!-- times-div-All_Exception_Tests -->
             </div> <!-- times-div -->
@@ -225,13 +225,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Exception_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.herokuapp.theinternet.Login_Exceptions_Tests</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">dynamic_Loading_Timeout</span>
+                <br/>
+                <span class="ignored-method-name">stale_Element_Test_Exception</span>
                 <br/>
                 <span class="ignored-method-name">dynamic_Loading</span>
                 <br/>
@@ -251,12 +253,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">stale_Element_Test_Exception</span>
-                <span class="method-start">5179 ms</span>
+                <span class="method-name">disabled_Element_Exception</span>
+                <span class="method-start">8545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">9060 ms</span>
+                <span class="method-start">12827 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

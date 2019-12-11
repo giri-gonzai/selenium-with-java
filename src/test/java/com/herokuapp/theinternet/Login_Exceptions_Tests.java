@@ -114,27 +114,31 @@ public class Login_Exceptions_Tests {
 		Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
 	}
 
-	@Test
+	@Test(groups = { "disabled-exception-tests" })
 	public void disabled_Element_Exception() {
 
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
 
-		// Locator for Checkbox
-		WebElement checkboxElement = driver.findElement(By.id("checkbox"));
-		checkboxElement.click();
+		//Define the web elements
+		WebElement enableButton = driver.findElement(By.xpath("//button[contains(text(), 'Enable')]"));
+		WebElement textField = driver.findElement(By.xpath("(//input)[2]"));
 		
-		//Verify the text field is disabled
+		// Click on Enable button
+		enableButton.click();
+
+		// Wait for the text field to be enabled
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+
+		// Verify the text field is enabled
+		wait.until(ExpectedConditions.elementToBeClickable(textField));
+
+		// Input text into enabled text field
+		textField.sendKeys("Text field is enabled");
 		
-		//Click on Enable button
-		
-		//Wait for the text field to be enabled
-		
-		//Verify the text field is enabled
-		
-		//Input text into enabled text field
-		
-		//Verify the text by getText() against the entered text
+		// Verify the text by getText() against the entered text
+		Assert.assertEquals(textField.getAttribute("value"), "Text field is enabled");
+
 	}
 
 	@AfterMethod(alwaysRun = true)

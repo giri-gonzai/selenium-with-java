@@ -2,41 +2,28 @@
 
 <suite name="All-Exception-Tests" verbose="1">
 
-	<!-- <test name="Login_Exception_Tests">
-		<groups>
-			<run>
-				<include name="positiveTest , smokeTest " />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
-				<methods>
-					<include name="dynamic_Loading" />
-				</methods>
-			</class>
-		</classes>
-	</test>
+	<!-- <test name="Login_Exception_Tests"> <groups> <run> <include name="positiveTest 
+		, smokeTest " /> </run> </groups> <classes> <class name="com.herokuapp.theinternet.Login_Exceptions_Tests"> 
+		<methods> <include name="dynamic_Loading" /> </methods> </class> </classes> 
+		</test> <test name="Dynamic_Logout_Timeout"> <classes> <class name="com.herokuapp.theinternet.Login_Exceptions_Tests"> 
+		<methods> <include name="dynamic_Loading_Timeout" /> </methods> </class> 
+		</classes> </test> -->
 
-	<test name="Dynamic_Logout_Timeout">
-		<classes>
-			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
-				<methods>
-					<include name="dynamic_Loading_Timeout" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
+	<!-- <test name="Stale_Element_Exception"> <groups> <run> <include name="exception-tests" 
+		/> </run> </groups> <classes> <class name="com.herokuapp.theinternet.Login_Exceptions_Tests"> 
+		<methods> <include name="stale_Element_Test_Exception" /> </methods> </class> 
+		</classes> </test> -->
 
 	<test name="Stale_Element_Exception">
 		<groups>
 			<run>
-				<include name="exception-tests" />
+				<include name="disabled-exception-tests" />
 			</run>
 		</groups>
 		<classes>
 			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
 				<methods>
-					<include name="stale_Element_Test_Exception" />
+					<include name="disabled_Element_Exception" />
 				</methods>
 			</class>
 		</classes>
