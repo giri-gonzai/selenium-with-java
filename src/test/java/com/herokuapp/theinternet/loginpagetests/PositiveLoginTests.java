@@ -1,45 +1,17 @@
 package com.herokuapp.theinternet.loginpagetests;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class PositiveLoginTests {
+import com.herokuapp.theinternet.base.BaseTest;
 
-	private WebDriver driver;
-
-	@BeforeMethod(alwaysRun = true)
-	private void setUp() {
-
-		// Create Browser Driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		driver = new ChromeDriver();
-
-		// Open Main URL
-		System.out.println("Starting test method: login_Test");
-		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().maximize();
-
-		// Implicit Wait
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-
-	@AfterMethod(alwaysRun = true)
-	private void closeUp() {
-
-		// Closer Browser Instance
-		driver.quit();
-	}
+public class PositiveLoginTests extends BaseTest {
 
 	@Parameters({ "username", "password" })
 	@Test(priority = 1, groups = { "positiveTest", "smokeTest" })
@@ -63,7 +35,8 @@ public class PositiveLoginTests {
 
 		// Click Login
 		System.out.println("Click Login Button");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")));
+		wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")));
 		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
 
 		// Verification Steps

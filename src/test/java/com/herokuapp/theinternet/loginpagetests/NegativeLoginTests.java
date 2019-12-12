@@ -1,40 +1,16 @@
 package com.herokuapp.theinternet.loginpagetests;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class NegativeLoginTests {
+import com.herokuapp.theinternet.base.BaseTest;
 
-	private WebDriver driver;
-
-	@BeforeMethod(alwaysRun = true)
-	private void setUp() {
-
-		// Create Browser Driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		driver = new ChromeDriver();
-
-		// Open Main URL
-		System.out.println("Starting test method: login_Test");
-		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().maximize();
-
-		// Implicit Wait
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
+public class NegativeLoginTests extends BaseTest {
 
 	@Test
 	public void dynamic_Loading() {
@@ -120,10 +96,10 @@ public class NegativeLoginTests {
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
 
-		//Define the web elements
+		// Define the web elements
 		WebElement enableButton = driver.findElement(By.xpath("//button[contains(text(), 'Enable')]"));
 		WebElement textField = driver.findElement(By.xpath("(//input)[2]"));
-		
+
 		// Click on Enable button
 		enableButton.click();
 
@@ -135,17 +111,10 @@ public class NegativeLoginTests {
 
 		// Input text into enabled text field
 		textField.sendKeys("Text field is enabled");
-		
+
 		// Verify the text by getText() against the entered text
 		Assert.assertEquals(textField.getAttribute("value"), "Text field is enabled");
 
-	}
-
-	@AfterMethod(alwaysRun = true)
-	private void closeUp() {
-
-		// Closer Browser Instance
-		driver.quit();
 	}
 
 }
