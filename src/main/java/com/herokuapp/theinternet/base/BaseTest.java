@@ -17,7 +17,7 @@ public class BaseTest {
 		driver = new ChromeDriver();
 
 		// Open Main URL
-		System.out.println("Starting test method: login_Test");
+		//System.out.println("Starting test method: login_Test");
 		driver.get("https://the-internet.herokuapp.com/");
 		driver.manage().window().maximize();
 

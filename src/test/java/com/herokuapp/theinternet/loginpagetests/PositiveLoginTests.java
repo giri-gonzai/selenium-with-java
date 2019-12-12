@@ -9,9 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class PositiveLoginTests extends BaseTest {
+public class PositiveLoginTests extends TestUtilities {
 
 	@Parameters({ "username", "password" })
 	@Test(priority = 1, groups = { "positiveTest", "smokeTest" })
@@ -61,15 +61,6 @@ public class PositiveLoginTests extends BaseTest {
 	@Parameters({ "username", "password" })
 	@Test(priority = 2, groups = { "negativeTest", "smokeTest" })
 	public void negative_LoginTest_Incorrect_Username(String username, String password) {
-
-		// Create Browser Driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		WebDriver driver = new ChromeDriver();
-
-		// Open Main URL
-		System.out.println("Starting test method: login_Test");
-		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().maximize();
 
 		// Open the Form Authentication URL
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();

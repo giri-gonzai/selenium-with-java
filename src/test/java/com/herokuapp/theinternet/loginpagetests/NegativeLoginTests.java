@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class NegativeLoginTests extends BaseTest {
+public class NegativeLoginTests extends TestUtilities {
 
 	@Test
 	public void dynamic_Loading() {
@@ -33,6 +33,7 @@ public class NegativeLoginTests extends BaseTest {
 		String finishText = finishElement.getText();
 		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
 	}
+	
 
 	@Test
 	public void dynamic_Loading_Timeout() {
@@ -88,6 +89,7 @@ public class NegativeLoginTests extends BaseTest {
 		addElement.click();
 
 		Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+		
 	}
 
 	@Test(groups = { "disabled-exception-tests" })
@@ -95,6 +97,9 @@ public class NegativeLoginTests extends BaseTest {
 
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
+		
+		//Calling Test Utilities Function
+		pageTitle();
 
 		// Define the web elements
 		WebElement enableButton = driver.findElement(By.xpath("//button[contains(text(), 'Enable')]"));
