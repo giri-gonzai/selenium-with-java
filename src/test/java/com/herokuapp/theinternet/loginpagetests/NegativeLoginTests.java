@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet;
+package com.herokuapp.theinternet.loginpagetests;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Login_Exceptions_Tests {
+public class NegativeLoginTests {
 
 	private WebDriver driver;
 
