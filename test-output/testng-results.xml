@@ -2,23 +2,30 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-12T19:54:16 NZDT" name="Negative_Test_Suite" finished-at="2019-12-12T19:54:25 NZDT" duration-ms="9413">
+  <suite started-at="2019-12-15T23:15:35 NZDT" name="Negative_Test_Suite" finished-at="2019-12-15T23:15:44 NZDT" duration-ms="8716">
     <groups>
       <group name="disabled-exception-tests">
-        <method signature="NegativeLoginTests.disabled_Element_Exception()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@4034c28c]" name="disabled_Element_Exception" class="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests"/>
+        <method signature="NegativeLoginTests.disabled_Element_Exception()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@17c1bced]" name="disabled_Element_Exception" class="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests"/>
       </group> <!-- disabled-exception-tests -->
     </groups>
-    <test started-at="2019-12-12T19:54:16 NZDT" name="Stale_Element_Exception" finished-at="2019-12-12T19:54:25 NZDT" duration-ms="9413">
+    <test started-at="2019-12-15T23:15:35 NZDT" name="Stale_Element_Exception" finished-at="2019-12-15T23:15:44 NZDT" duration-ms="8716">
       <class name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@4034c28c]" started-at="2019-12-12T19:54:16 NZDT" name="setUp" finished-at="2019-12-12T19:54:20 NZDT" duration-ms="4832" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@17c1bced]" started-at="2019-12-15T23:15:35 NZDT" name="setUp" finished-at="2019-12-15T23:15:40 NZDT" duration-ms="4558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="disabled_Element_Exception()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@4034c28c]" started-at="2019-12-12T19:54:20 NZDT" name="disabled_Element_Exception" finished-at="2019-12-12T19:54:25 NZDT" duration-ms="4467" status="PASS">
+        <test-method signature="disabled_Element_Exception()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@17c1bced]" started-at="2019-12-15T23:15:40 NZDT" name="disabled_Element_Exception" finished-at="2019-12-15T23:15:44 NZDT" duration-ms="4040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disabled_Element_Exception -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@4034c28c]" started-at="2019-12-12T19:54:25 NZDT" name="closeUp" finished-at="2019-12-12T19:54:25 NZDT" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@17c1bced]" started-at="2019-12-15T23:15:44 NZDT" name="closeUp" finished-at="2019-12-15T23:15:44 NZDT" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
