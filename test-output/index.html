@@ -54,12 +54,12 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Negative_Test_Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Negative_Test_Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Negative_Test_Suite" title="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests" class="method navigator-link" hash-for-method="disabled_Element_Exception">disabled_Element_Exception</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Test_Suite" title="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests" class="method navigator-link" hash-for-method="stale_Element_Test_Exception">stale_Element_Test_Exception</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Negative_Test_Suite -->
@@ -130,6 +135,13 @@
                   <span class="method-name">disabled_Element_Exception</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="stale_Element_Test_Exception">
+                  </a> <!-- stale_Element_Test_Exception -->
+                  <span class="method-name">stale_Element_Test_Exception</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Negative_Test_Suite-class-passed -->
         </div> <!-- panel Negative_Test_Suite -->
@@ -141,8 +153,22 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Negative_Test_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Stale_Element_Exception&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Negative_Test_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Stale_Element_Exception&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;exception-tests&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.NegativeLoginTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;stale_Element_Test_Exception&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Stale_Element_Exception --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Disabled_Element_Exception&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;disabled-exception-tests&quot;/&gt;
@@ -155,7 +181,7 @@
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Stale_Element_Exception --&gt;
+  &lt;/test&gt; &lt;!-- Disabled_Element_Exception --&gt;
 &lt;/suite&gt; &lt;!-- Negative_Test_Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,6 +194,9 @@
             <ul>
               <li>
                 <span class="test-name">Stale_Element_Exception (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Disabled_Element_Exception (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -182,6 +211,14 @@
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">disabled_Element_Exception</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">exception-tests</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">stale_Element_Test_Exception</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -201,16 +238,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'disabled_Element_Exception')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.NegativeLoginTests')
-data.setCell(0, 3, 4040);
+data.setCell(0, 3, 4243);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'stale_Element_Test_Exception')
+data.setCell(1, 2, 'com.herokuapp.theinternet.loginpagetests.NegativeLoginTests')
+data.setCell(1, 3, 3923);
 window.suiteTableData['Negative_Test_Suite']= { tableData: data, tableDiv: 'times-div-Negative_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Negative_Test_Suite">
               </div> <!-- times-div-Negative_Test_Suite -->
             </div> <!-- times-div -->
@@ -225,7 +266,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -233,7 +274,13 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">dynamic_Loading_Timeout</span>
                 <br/>
+                <span class="ignored-method-name">dynamic_Loading_Timeout</span>
+                <br/>
                 <span class="ignored-method-name">stale_Element_Test_Exception</span>
+                <br/>
+                <span class="ignored-method-name">dynamic_Loading</span>
+                <br/>
+                <span class="ignored-method-name">disabled_Element_Exception</span>
                 <br/>
                 <span class="ignored-method-name">dynamic_Loading</span>
                 <br/>
@@ -252,13 +299,25 @@ return data;
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">disabled_Element_Exception</span>
-                <span class="method-start">4559 ms</span>
+                <span class="method-start">6117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">stale_Element_Test_Exception</span>
+                <span class="method-start">6127 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">8601 ms</span>
+                <span class="method-start">10054 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeUp</span>
+                <span class="method-start">10361 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
