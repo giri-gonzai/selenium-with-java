@@ -67,16 +67,16 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
-		pageTitle();
+		pageTitle();	// Calling Test Utilities Function
 
 		// Locator for Checkbox
 		WebElement checkboxElement = driver.findElement(By.id("checkbox"));
-		pageTitle();
+		pageTitle();	// Calling Test Utilities Function
 		checkboxElement.click();
 
 		// Locator for Button
 		driver.findElement(By.xpath("//form[@id='checkbox-example']/button[@type='button']")).click();
-		pageTitle();
+		pageTitle();	// Calling Test Utilities Function
 
 		// Explicit Wait - Using invisibilityof for which test will continue when the
 		// element becomes invisible within given time
