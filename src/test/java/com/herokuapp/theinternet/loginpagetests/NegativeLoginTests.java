@@ -53,7 +53,7 @@ public class NegativeLoginTests extends TestUtilities {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(finishElement));
 		} catch (TimeoutException exception) {
-			System.out.println("Timeout Exception captured: " + exception.getMessage());
+			log.info("Timeout Exception captured: " + exception.getMessage());
 		}
 		String finishText = finishElement.getText();
 		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
@@ -80,7 +80,7 @@ public class NegativeLoginTests extends TestUtilities {
 			// Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
 			Assert.assertTrue(wait.until(ExpectedConditions.stalenessOf(checkboxElement)));
 		} catch (TimeoutException exception) {
-			System.out.println("Timeout Exception captured: " + exception.getMessage());
+			log.info("Timeout Exception captured: " + exception.getMessage());
 		}
 
 		WebElement addElement = driver.findElement(By.xpath("//form[@id='checkbox-example']/button[@type='button']"));

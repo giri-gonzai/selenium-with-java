@@ -19,22 +19,22 @@ public class PositiveLoginTests extends TestUtilities {
 
 		// Open the Form Authentication URL
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		System.out.println("Opening the Form Authentication Page");
+		log.info("Opening the Form Authentication Page");
 		// Thread.sleep(3000);
 
 		// Enter Username
-		System.out.println("Entering Username");
+		log.info("Entering Username");
 		driver.findElement(By.id("username")).sendKeys(username);
 
 		// Enter Password
-		System.out.println("Entering Password");
+		log.info("Entering Password");
 		driver.findElement(By.id("password")).sendKeys(password);
 
 		// Explicit Wait
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
 		// Click Login
-		System.out.println("Click Login Button");
+		log.info("Click Login Button");
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")));
 		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
@@ -42,15 +42,15 @@ public class PositiveLoginTests extends TestUtilities {
 		// Verification Steps
 		// Verify the 'secure' URL
 		var urlAssertion = driver.getCurrentUrl();
-		System.out.println("Verifying the URL");
+		log.info("Verifying the URL");
 		Assert.assertEquals("https://the-internet.herokuapp.com/secure", urlAssertion);
 
 		// Verify the successful login button
-		System.out.println("Verifying the login div");
+		log.info("Verifying the login div");
 		driver.findElement(By.xpath("//div[@id='flash']")).isDisplayed();
 
 		// Verify the 'Logout' button
-		System.out.println("Verifying the logout button");
+		log.info("Verifying the logout button");
 		driver.findElement(By.xpath("//a[@class='button secondary radius']")).isDisplayed();
 
 		// Advanced Verification
@@ -64,29 +64,29 @@ public class PositiveLoginTests extends TestUtilities {
 
 		// Open the Form Authentication URL
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		System.out.println("Opening the Form Authentication Page");
+		log.info("Opening the Form Authentication Page");
 		// Thread.sleep(3000);
 
 		// Enter Username
-		System.out.println("Entering Username");
+		log.info("Entering Username");
 		driver.findElement(By.id("username")).sendKeys(username);
 
 		// Enter Password
-		System.out.println("Entering Password");
+		log.info("Entering Password");
 		driver.findElement(By.id("password")).sendKeys(password);
 
 		// Click Login
-		System.out.println("Click Login Button");
+		log.info("Click Login Button");
 		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
 
 		// Verification Steps
 		// Verify the 'secure' URL
 		var urlAssertion = driver.getCurrentUrl();
-		System.out.println("Verifying the URL");
+		log.info("Verifying the URL");
 		Assert.assertEquals("https://the-internet.herokuapp.com/login", urlAssertion);
 
 		// Verifying the message
-		System.out.println("Verifying the incorrect login message");
+		log.info("Verifying the incorrect login message");
 		driver.findElement(By.xpath("//div[@class='flash error']")).isDisplayed();
 
 	}
@@ -100,35 +100,35 @@ public class PositiveLoginTests extends TestUtilities {
 		WebDriver driver = new ChromeDriver();
 
 		// Open Main URL
-		System.out.println("Starting test method: login_Test");
+		log.info("Starting test method: login_Test");
 		driver.get("https://the-internet.herokuapp.com/");
 		driver.manage().window().maximize();
 
 		// Open the Form Authentication URL
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		System.out.println("Opening the Form Authentication Page");
+		log.info("Opening the Form Authentication Page");
 		// Thread.sleep(3000);
 
 		// Enter Username
-		System.out.println("Entering Username");
+		log.info("Entering Username");
 		driver.findElement(By.id("username")).sendKeys(username);
 
 		// Enter Password
-		System.out.println("Entering Password");
+		log.info("Entering Password");
 		driver.findElement(By.id("password")).sendKeys(password);
 
 		// Click Login
-		System.out.println("Click Login Button");
+		log.info("Click Login Button");
 		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
 
 		// Verification Steps
 		// Verify the 'secure' URL
 		var urlAssertion = driver.getCurrentUrl();
-		System.out.println("Verifying the URL");
+		log.info("Verifying the URL");
 		Assert.assertEquals("https://the-internet.herokuapp.com/login", urlAssertion);
 
 		// Verifying the message
-		System.out.println("Verifying the incorrect login message");
+		log.info("Verifying the incorrect login message");
 		driver.findElement(By.xpath("//div[@class='flash error']")).isDisplayed();
 
 	}
