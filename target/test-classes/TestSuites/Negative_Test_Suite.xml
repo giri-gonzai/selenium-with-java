@@ -1,37 +1,25 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Negative_Test_Suite" parallel="tests"
-	thread-count="2" verbose="1">
-
-	<!-- <test name="Login_Exception_Tests">
+<suite name="Negative_Test_Suite" parallel="tests" thread-count="3" verbose="1">
+	<test name="Dynamic_Logout_Timeout">
 		<groups>
-			<run>
-				<include name="positiveTest 
-		, smokeTest " />
-			</run>
+			<run> 
+				<include name="exception-timeout" />
+			</run> 
 		</groups>
 		<classes>
-			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
-				<methods>
-					<include name="dynamic_Loading" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Dynamic_Logout_Timeout">
-		<classes>
-			<class name="com.herokuapp.theinternet.Login_Exceptions_Tests">
+			<class name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
 				<methods>
 					<include name="dynamic_Loading_Timeout" />
 				</methods>
 			</class>
 		</classes>
-	</test> -->
+	</test>
 
 	<test name="Stale_Element_Exception">
 		<groups>
 			<run>
-				<include name="exception-tests" />
+				<include name="exception-stale-element-test" />
 			</run>
 		</groups>
 		<classes>
@@ -46,7 +34,7 @@
 	<test name="Disabled_Element_Exception">
 		<groups>
 			<run>
-				<include name="disabled-exception-tests" />
+				<include name="exception-disabled-test" />
 			</run>
 		</groups>
 		<classes>
@@ -58,5 +46,4 @@
 			</class>
 		</classes>
 	</test>
-
 </suite>

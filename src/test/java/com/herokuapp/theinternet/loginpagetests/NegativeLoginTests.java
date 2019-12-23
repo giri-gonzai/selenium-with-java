@@ -12,30 +12,28 @@ import com.herokuapp.theinternet.base.TestUtilities;
 
 public class NegativeLoginTests extends TestUtilities {
 
-	@Test
-	public void dynamic_Loading() {
+	/*
+	 * @Test public void dynamic_Loading() {
+	 * 
+	 * // Navigate to Dynamic Loading page driver.findElement(By.xpath(
+	 * "//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
+	 * 
+	 * // Navigate to Locator Page driver.findElement(By.xpath(
+	 * "//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
+	 * 
+	 * // Locate the Start button
+	 * driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
+	 * 
+	 * // Verify the 'Hello World' WebElement finishElement =
+	 * driver.findElement(By.id("finish"));
+	 * 
+	 * // Explicit Wait WebDriverWait wait = new WebDriverWait(driver, 10);
+	 * wait.until(ExpectedConditions.visibilityOf(finishElement)); String finishText
+	 * = finishElement.getText(); Assert.assertEquals(finishText, "Hello World!",
+	 * "Exception: The actual value is not as the expected value"); }
+	 */
 
-		// Navigate to Dynamic Loading page
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
-
-		// Navigate to Locator Page
-		driver.findElement(By.xpath("//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
-
-		// Locate the Start button
-		driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
-
-		// Verify the 'Hello World'
-		WebElement finishElement = driver.findElement(By.id("finish"));
-
-		// Explicit Wait
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(finishElement));
-		String finishText = finishElement.getText();
-		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
-	}
-	
-
-	@Test
+	@Test(groups = { "exception-timeout" })
 	public void dynamic_Loading_Timeout() {
 
 		// Navigate to Dynamic Loading page
@@ -51,7 +49,7 @@ public class NegativeLoginTests extends TestUtilities {
 		WebElement finishElement = driver.findElement(By.id("finish"));
 
 		// Explicit Wait
-		WebDriverWait wait = new WebDriverWait(driver, 2);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
 			wait.until(ExpectedConditions.visibilityOf(finishElement));
 		} catch (TimeoutException exception) {
@@ -61,7 +59,7 @@ public class NegativeLoginTests extends TestUtilities {
 		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
 	}
 
-	@Test(groups = { "exception-tests" })
+	@Test(groups = { "exception-stale-element-test" })
 	public void stale_Element_Test_Exception() {
 
 		// Navigating to Dynamic Control Page
@@ -89,16 +87,16 @@ public class NegativeLoginTests extends TestUtilities {
 		addElement.click();
 
 		Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
-		
+
 	}
 
-	@Test(groups = { "disabled-exception-tests" })
+	@Test(groups = { "exception-disabled-test" })
 	public void disabled_Element_Exception() {
 
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
-		
-		//Calling Test Utilities Function
+
+		// Calling Test Utilities Function
 		pageTitle();
 
 		// Define the web elements
