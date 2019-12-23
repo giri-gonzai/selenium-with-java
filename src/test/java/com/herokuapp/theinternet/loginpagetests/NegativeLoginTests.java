@@ -60,6 +60,8 @@ public class NegativeLoginTests extends TestUtilities {
 		}
 		String finishText = finishElement.getText();
 		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
+		
+		closeUp();
 	}
 
 	@Test(groups = { "exception-stale-element-test" })
@@ -93,6 +95,8 @@ public class NegativeLoginTests extends TestUtilities {
 		addElement.click();
 
 		Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkboxElement)));
+		
+		closeUp();
 
 	}
 
@@ -123,6 +127,8 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Verify the text by getText() against the entered text
 		Assert.assertEquals(textField.getAttribute("value"), "Text field is enabled");
+		
+		closeUp();
 
 	}
 
