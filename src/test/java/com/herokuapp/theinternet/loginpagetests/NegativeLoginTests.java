@@ -38,12 +38,15 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Navigate to Dynamic Loading page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
+		pageTitle();
 
 		// Navigate to Locator Page
 		driver.findElement(By.xpath("//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
+		pageTitle();
 
 		// Locate the Start button
 		driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
+		pageTitle();
 
 		// Verify the 'Hello World'
 		WebElement finishElement = driver.findElement(By.id("finish"));
@@ -64,13 +67,16 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Navigating to Dynamic Control Page
 		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
+		pageTitle();
 
 		// Locator for Checkbox
 		WebElement checkboxElement = driver.findElement(By.id("checkbox"));
+		pageTitle();
 		checkboxElement.click();
 
 		// Locator for Button
 		driver.findElement(By.xpath("//form[@id='checkbox-example']/button[@type='button']")).click();
+		pageTitle();
 
 		// Explicit Wait - Using invisibilityof for which test will continue when the
 		// element becomes invisible within given time

@@ -6,6 +6,6 @@ public class TestUtilities extends BaseTest{
 	
 	protected void pageTitle() {
 		String Title = driver.getTitle();
-		System.out.println("The title of the page is: " + Title);
+		log.info("The title of the page is: " + Title);
 		}
 }
