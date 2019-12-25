@@ -2,55 +2,14 @@
 
 <suite name="Positive_Login_Suite" verbose="1">
 
-	<test name="PositiveLoginTest">
-		<parameter name="username" value="tomsmith" />
-		<parameter name="password" value="SuperSecretPassword!" />
-		<groups>
-			<run>
-				<include name="positiveTest , smokeTest " />
-			</run>
-		</groups>
+	<test name="Positive_Login_Test">
 		<classes>
-			<class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
-					<include name="positive_LoginTest" />
+					<include name="logInTest" />
 				</methods>
 			</class>
 		</classes>
 	</test>
-
-	<test name="NegativeLoginTest_Incorrect_Username">
-		<parameter name="username" value="incorrect" />
-		<parameter name="password" value="SuperSecretPassword!" />
-		<groups>
-			<run>
-				<include name="negativeTest , smokeTest" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-				<methods>
-					<include name="negative_LoginTest_Incorrect_Username" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-
-	<test name="NegativeLoginTest_Incorrect_Password">
-		<parameter name="username" value="tomsmith" />
-		<parameter name="password" value="SuperSecretPassword" />
-		<groups>
-			<run>
-				<include name="negativeTest , smokeTest" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-				<methods>
-					<include name="negative_LoginTest_Incorrect_Password" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-
 </suite>

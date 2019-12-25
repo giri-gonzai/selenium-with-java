@@ -1,12 +1,6 @@
 package com.herokuapp.theinternet.loginpagetests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
@@ -16,148 +10,31 @@ import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class PositiveLoginTests extends TestUtilities {
 
+	@Test
 	public void logInTest() {
 		log.info("Starting Positive Test: ");
-		
+
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.OpenPage();
-		
-		//Click on Form Authentication Link
+
+		// Click on Form Authentication Link
 		LoginPage loginPage = welcomePage.clickAuthenticationFormLink();
-		
-		//Entering Username, Password and click Login
+
+		// Entering Username, Password and click Login
 		SecureAreaPage secureAreaPage = loginPage.logIn("tomsmith", "SuperSecretPassword!");
-		
-		//Verifying Login URL
+
+		// Verifying Login URL
 		Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
 
-		//Verifying Visibility of Logout Button 
+		// Verifying Visibility of Logout Button
 		Assert.assertTrue(secureAreaPage.isLogOutVisible());
-		
-		//Verifying Login Success Message
-		String actualSuccessMessage = "You logged into a secure area!";
-		String expectedSuccessMessage = secureAreaPage.getSuccessMessage();
-		Assert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
-	}
-	
-	@Parameters({ "username", "password" })
-	@Test(priority = 1, groups = { "positiveTest", "smokeTest" })
-	public void positive_LoginTest(String username, String password) {
 
-		// Open the Form Authentication URL
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		log.info("Opening the Form Authentication Page");
-		// Thread.sleep(3000);
-
-		// Enter Username
-		log.info("Entering Username");
-		driver.findElement(By.id("username")).sendKeys(username);
-
-		// Enter Password
-		log.info("Entering Password");
-		driver.findElement(By.id("password")).sendKeys(password);
-
-		// Explicit Wait
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-		// Click Login
-		log.info("Click Login Button");
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")));
-		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
-
-		// Verification Steps
-		// Verify the 'secure' URL
-		var urlAssertion = driver.getCurrentUrl();
-		log.info("Verifying the URL");
-		Assert.assertEquals("https://the-internet.herokuapp.com/secure", urlAssertion);
-
-		// Verify the successful login button
-		log.info("Verifying the login div");
-		driver.findElement(By.xpath("//div[@id='flash']")).isDisplayed();
-
-		// Verify the 'Logout' button
-		log.info("Verifying the logout button");
-		driver.findElement(By.xpath("//a[@class='button secondary radius']")).isDisplayed();
-
-		// Advanced Verification
-		// Check the HTTP Response of the Successful login page
-		// Check the API Response
-	}
-
-	@Parameters({ "username", "password" })
-	@Test(priority = 2, groups = { "negativeTest", "smokeTest" })
-	public void negative_LoginTest_Incorrect_Username(String username, String password) {
-
-		// Open the Form Authentication URL
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		log.info("Opening the Form Authentication Page");
-		// Thread.sleep(3000);
-
-		// Enter Username
-		log.info("Entering Username");
-		driver.findElement(By.id("username")).sendKeys(username);
-
-		// Enter Password
-		log.info("Entering Password");
-		driver.findElement(By.id("password")).sendKeys(password);
-
-		// Click Login
-		log.info("Click Login Button");
-		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
-
-		// Verification Steps
-		// Verify the 'secure' URL
-		var urlAssertion = driver.getCurrentUrl();
-		log.info("Verifying the URL");
-		Assert.assertEquals("https://the-internet.herokuapp.com/login", urlAssertion);
-
-		// Verifying the message
-		log.info("Verifying the incorrect login message");
-		driver.findElement(By.xpath("//div[@class='flash error']")).isDisplayed();
-
-	}
-
-	@Parameters({ "username", "password" })
-	@Test(priority = 3, groups = { "negativeTest", "smokeTest" })
-	public void negative_LoginTest_Incorrect_Password(String username, String password) {
-
-		// Create Browser Driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		WebDriver driver = new ChromeDriver();
-
-		// Open Main URL
-		log.info("Starting test method: login_Test");
-		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().maximize();
-
-		// Open the Form Authentication URL
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/login']")).click();
-		log.info("Opening the Form Authentication Page");
-		// Thread.sleep(3000);
-
-		// Enter Username
-		log.info("Entering Username");
-		driver.findElement(By.id("username")).sendKeys(username);
-
-		// Enter Password
-		log.info("Entering Password");
-		driver.findElement(By.id("password")).sendKeys(password);
-
-		// Click Login
-		log.info("Click Login Button");
-		driver.findElement(By.xpath("//form[@id='login']//i[@class='fa fa-2x fa-sign-in']")).click();
-
-		// Verification Steps
-		// Verify the 'secure' URL
-		var urlAssertion = driver.getCurrentUrl();
-		log.info("Verifying the URL");
-		Assert.assertEquals("https://the-internet.herokuapp.com/login", urlAssertion);
-
-		// Verifying the message
-		log.info("Verifying the incorrect login message");
-		driver.findElement(By.xpath("//div[@class='flash error']")).isDisplayed();
-
+		// Verifying Login Success Message
+		String expectedSuccessMessage = "You logged into a secure area!";
+		String actualSuccessMessage = secureAreaPage.getSuccessMessage();
+		Assert.assertTrue(expectedSuccessMessage.contains(actualSuccessMessage),
+				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
+						+ expectedSuccessMessage + "\nactualSucessMessage" + actualSuccessMessage);
 	}
 
 }
