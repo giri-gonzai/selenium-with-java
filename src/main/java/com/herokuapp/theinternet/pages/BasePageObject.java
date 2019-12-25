@@ -61,4 +61,8 @@ public class BasePageObject {
 			} attempts++;
 		}
 	}
+	
+	public String getCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
 }

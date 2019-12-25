@@ -10,9 +10,36 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.LoginPage;
+import com.herokuapp.theinternet.pages.SecureAreaPage;
+import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class PositiveLoginTests extends TestUtilities {
 
+	public void logInTest() {
+		log.info("Starting Positive Test: ");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Click on Form Authentication Link
+		LoginPage loginPage = welcomePage.clickAuthenticationFormLink();
+		
+		//Entering Username, Password and click Login
+		SecureAreaPage secureAreaPage = loginPage.logIn("tomsmith", "SuperSecretPassword!");
+		
+		//Verifying Login URL
+		Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
+
+		//Verifying Visibility of Logout Button 
+		Assert.assertTrue(secureAreaPage.isLogOutVisible());
+		
+		//Verifying Login Success Message
+		String actualSuccessMessage = "You logged into a secure area!";
+		String expectedSuccessMessage = secureAreaPage.getSuccessMessage();
+		Assert.assertEquals(actualSuccessMessage, expectedSuccessMessage);
+	}
+	
 	@Parameters({ "username", "password" })
 	@Test(priority = 1, groups = { "positiveTest", "smokeTest" })
 	public void positive_LoginTest(String username, String password) {
