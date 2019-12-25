@@ -1,0 +1,35 @@
+package com.herokuapp.theinternet.pages;
+
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class WelcomePageObject extends BasePageObject {
+
+	private String pageUrl = "https://the-internet.herokuapp.com/";
+	
+	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
+	
+	//Setting Constructor for the POM Class
+	public WelcomePageObject(WebDriver driver, Logger log) {
+		super(driver, log);
+	}
+	
+	//Opening the URL method
+	public void OpenPage() {
+		
+		log.info("Opening page: " + pageUrl);		//Opening The Internet Heroku Page
+		openUrl(pageUrl);							//Commanding the browser to open the URL
+		log.info("Page successfully opened.");
+		
+	}
+	
+	//Clicking on the Form Authentication Link
+	public LoginPage clickAuthenticationFormLink() {
+		
+		log.info("Clicking on Form Authentication Link");
+		click(formAuthenticationLinkLocator);	
+		return new LoginPage(driver, log);
+	}
+
+}
