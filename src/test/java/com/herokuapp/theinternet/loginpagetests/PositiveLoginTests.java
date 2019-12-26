@@ -27,12 +27,12 @@ public class PositiveLoginTests extends TestUtilities {
 		Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
 
 		// Verifying Visibility of Logout Button
-		Assert.assertTrue(secureAreaPage.isLogOutVisible());
+		Assert.assertTrue(secureAreaPage.isLogOutVisible(), "LogOut Button is not visible.");
 
 		// Verifying Login Success Message
 		String expectedSuccessMessage = "You logged into a secure area!";
 		String actualSuccessMessage = secureAreaPage.getSuccessMessage();
-		Assert.assertTrue(expectedSuccessMessage.contains(actualSuccessMessage),
+		Assert.assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),
 				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
 						+ expectedSuccessMessage + "\nactualSucessMessage" + actualSuccessMessage);
 	}

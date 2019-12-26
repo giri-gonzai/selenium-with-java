@@ -8,7 +8,7 @@ public class SecureAreaPage extends BasePageObject {
 
 	private String pageUrl = "https://the-internet.herokuapp.com/secure";
 	private By logOutButtonLocator = By.xpath("//a[@href='/logout']");
-	private By successMessageLocator = By.id("flash-message");
+	private By successMessageLocator = By.id("flash");
 	
 	public SecureAreaPage(WebDriver driver, Logger log) {
 		super(driver, log);
