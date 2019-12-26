@@ -31,5 +31,10 @@ public class WelcomePageObject extends BasePageObject {
 		click(formAuthenticationLinkLocator);	
 		return new LoginPage(driver, log);
 	}
+	
+	//Click on the Dynamic Loading Link
+	public DynamicLoadingPage clickDynamicLoadingLink() {
+		return new DynamicLoadingPage(driver, log);
+	}
 
 }
