@@ -10,6 +10,8 @@ public class WelcomePageObject extends BasePageObject {
 	
 	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
 	
+	private By dyanmicLoadingLinkLocator = By.xpath("//a[@href='/dynamic_loading']");
+	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -34,6 +36,9 @@ public class WelcomePageObject extends BasePageObject {
 	
 	//Click on the Dynamic Loading Link
 	public DynamicLoadingPage clickDynamicLoadingLink() {
+		
+		log.info("Clicking on Dynamic Loading Link");
+		click(dyanmicLoadingLinkLocator);
 		return new DynamicLoadingPage(driver, log);
 	}
 

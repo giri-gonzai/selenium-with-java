@@ -9,30 +9,29 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.DynamicLoadingExample1Page;
+import com.herokuapp.theinternet.pages.DynamicLoadingPage;
+import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class NegativeLoginTests extends TestUtilities {
 
-	/*
-	 * @Test public void dynamic_Loading() {
-	 * 
-	 * // Navigate to Dynamic Loading page driver.findElement(By.xpath(
-	 * "//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
-	 * 
-	 * // Navigate to Locator Page driver.findElement(By.xpath(
-	 * "//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
-	 * 
-	 * // Locate the Start button
-	 * driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
-	 * 
-	 * // Verify the 'Hello World' WebElement finishElement =
-	 * driver.findElement(By.id("finish"));
-	 * 
-	 * // Explicit Wait WebDriverWait wait = new WebDriverWait(driver, 10);
-	 * wait.until(ExpectedConditions.visibilityOf(finishElement)); String finishText
-	 * = finishElement.getText(); Assert.assertEquals(finishText, "Hello World!",
-	 * "Exception: The actual value is not as the expected value"); }
-	 */
-
+	@Test(groups = { "pom-negative-test" } )
+	public void negativeTest() {
+		log.info("Starting Negative Tests: ");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Clicking on Dynamic Loading Link
+		DynamicLoadingPage dynamicLoadingPage = welcomePage.clickDynamicLoadingLink();
+		
+		//Clicking on Dynamic Loading Example 1 Link
+		DynamicLoadingExample1Page dynamicLoadingExample1Page = dynamicLoadingPage.clickDynamicLoadingExample1();
+		
+		//Verifying Visibility of Hidden Element
+		Assert.assertEquals(dynamicLoadingExample1Page.isElementVisible(), "Hello World!");
+	}
+	
 	@Test(groups = { "exception-timeout" })
 	public void dynamic_Loading_Timeout() {
 

@@ -41,6 +41,12 @@ public class BasePageObject {
 		find(locator).sendKeys(text);
 	}
 	
+	/*
+	 * //View - Method for Explicit Wait for an element to be visible protected void
+	 * waitForElement(By locator) { waitForVisibilotyOf(locator, 5);
+	 * find(locator).isDisplayed(); }
+	 */
+	
 	//Method for Expected Conditions
 	private void waitFor(ExpectedCondition <WebElement> condition, Integer timeOutInSeconds) {
 		timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds : 30;
@@ -65,4 +71,5 @@ public class BasePageObject {
 	public String getCurrentUrl() {
 		return driver.getCurrentUrl();
 	}
+	
 }

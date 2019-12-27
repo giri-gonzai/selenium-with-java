@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Positive_Login_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Positive_Login_Suite</span>
+            <a href="#" panel-name="suite-Negative_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Negative_Test_Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Positive_Login_Suite" class="navigator-link ">
-                    <span>Positive_Test_Suite.xml</span>
+                  <a href="#" panel-name="test-xml-Negative_Test_Suite" class="navigator-link ">
+                    <span>Negative_Test_Suite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Positive_Login_Suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Negative_Test_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Positive_Login_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                  <a href="#" panel-name="group-Negative_Test_Suite" class="navigator-link ">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Positive_Login_Suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Negative_Test_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Positive_Login_Suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Negative_Test_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Positive_Login_Suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Negative_Test_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Positive_Login_Suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Negative_Test_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="hide-methods passed suite-Positive_Login_Suite"> (hide)</a> <!-- hide-methods passed suite-Positive_Login_Suite -->
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="show-methods passed suite-Positive_Login_Suite"> (show)</a> <!-- show-methods passed suite-Positive_Login_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Negative_Test_Suite" class="hide-methods failed suite-Negative_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Negative_Test_Suite -->
+                      <a href="#" panel-name="suite-Negative_Test_Suite" class="show-methods failed suite-Negative_Test_Suite"> (show)</a> <!-- show-methods failed suite-Negative_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Positive_Login_Suite">
+                    <div class="method-list-content failed suite-Negative_Test_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="logInTest">logInTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Test_Suite" title="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests" class="method navigator-link" hash-for-method="negativeTest">negativeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Positive_Login_Suite -->
+                    </div> <!-- method-list-content failed suite-Negative_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,73 +116,95 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Positive_Login_Suite" class="panel Positive_Login_Suite">
-          <div class="suite-Positive_Login_Suite-class-passed">
+        <div panel-name="suite-Negative_Test_Suite" class="panel Negative_Test_Suite">
+          <div class="suite-Negative_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logInTest">
-                  </a> <!-- logInTest -->
-                  <span class="method-name">logInTest</span>
+                  <a name="negativeTest">
+                  </a> <!-- negativeTest -->
+                  <span class="method-name">negativeTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Hello World!] but found []
+	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Login_Suite-class-passed -->
-        </div> <!-- panel Positive_Login_Suite -->
-        <div panel-name="test-xml-Positive_Login_Suite" class="panel">
+          </div> <!-- suite-Negative_Test_Suite-class-failed -->
+        </div> <!-- panel Negative_Test_Suite -->
+        <div panel-name="test-xml-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/giri/eclipse-workspace/selenium-with-java/src/test/resources/TestSuites/Positive_Test_Suite.xml</span>
+            <span class="header-content">/Users/giri/eclipse-workspace/selenium-with-java/src/test/resources/TestSuites/Negative_Test_Suite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Positive_Login_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Positive_Login_Test&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Negative_Test_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;POM_Dynamic_Logout_Timeout&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;pom-negative-test&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.PositiveLoginTests&quot;&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.NegativeLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;logInTest&quot;/&gt;
+          &lt;include name=&quot;negativeTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests --&gt;
+      &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Positive_Login_Test --&gt;
-&lt;/suite&gt; &lt;!-- Positive_Login_Suite --&gt;
+  &lt;/test&gt; &lt;!-- POM_Dynamic_Logout_Timeout --&gt;
+&lt;/suite&gt; &lt;!-- Negative_Test_Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Positive_Login_Suite" class="panel">
+        <div panel-name="testlist-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Positive_Login_Suite</span>
+            <span class="header-content">Tests for Negative_Test_Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Positive_Login_Test (1 class)</span>
+                <span class="test-name">POM_Dynamic_Logout_Timeout (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Positive_Login_Suite" class="panel">
+        <div panel-name="group-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Positive_Login_Suite</span>
+            <span class="header-content">Groups for Negative_Test_Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">pom-negative-test</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">negativeTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Positive_Login_Suite" class="panel">
+        <div panel-name="times-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Positive_Login_Suite</span>
+            <span class="header-content">Times for Negative_Test_Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Positive_Login_Suite');
-function tableData_Positive_Login_Suite() {
+suiteTableInitFunctions.push('tableData_Negative_Test_Suite');
+function tableData_Negative_Test_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -190,51 +212,64 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logInTest')
-data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.PositiveLoginTests')
-data.setCell(0, 3, 1936);
-window.suiteTableData['Positive_Login_Suite']= { tableData: data, tableDiv: 'times-div-Positive_Login_Suite'}
+data.setCell(0, 1, 'negativeTest')
+data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.NegativeLoginTests')
+data.setCell(0, 3, 1061);
+window.suiteTableData['Negative_Test_Suite']= { tableData: data, tableDiv: 'times-div-Negative_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-              <div id="times-div-Positive_Login_Suite">
-              </div> <!-- times-div-Positive_Login_Suite -->
+              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <div id="times-div-Negative_Test_Suite">
+              </div> <!-- times-div-Negative_Test_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Positive_Login_Suite" class="panel">
+        <div panel-name="reporter-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Positive_Login_Suite</span>
+            <span class="header-content">Reporter output for Negative_Test_Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Positive_Login_Suite" class="panel">
+        <div panel-name="ignored-methods-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">dynamic_Loading_Timeout</span>
+                <br/>
+                <span class="ignored-method-name">stale_Element_Test_Exception</span>
+                <br/>
+                <span class="ignored-method-name">disabled_Element_Exception</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Positive_Login_Suite" class="panel">
+        <div panel-name="chronological-Negative_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@29182679)</span>
+                <span class="method-name">setUp(chrome, org.testng.TestRunner@1f0f1111)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">logInTest</span>
-                <span class="method-start">5498 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">negativeTest</span>
+                <span class="method-start">4840 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">7438 ms</span>
+                <span class="method-start">5905 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
