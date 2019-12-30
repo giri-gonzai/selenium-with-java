@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 27 17:24:53 NZDT 2019</td>
+<td>Started on:</td><td>Mon Dec 30 16:57:11 NZDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6018 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15868 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>pom-negative-test </td>
 </tr><tr>
@@ -76,21 +76,36 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest()'><b>negativeTest</b><br>Test class: com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</td>
-<td><div><pre>java.lang.AssertionError: expected [Hello World!] but found []
-	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:32)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: finish (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Harshgiris-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1443:65db:e9e5:27c7%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 700e89ee5cb671d23fd727a814f140bb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitFor(BasePageObject.java:53)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitForVisibilityOf(BasePageObject.java:61)
+	at com.herokuapp.theinternet.pages.DynamicLoadingExample1Page.waitForText(DynamicLoadingExample1Page.java:20)
+	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace416957156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace416957156'><pre>java.lang.AssertionError: expected [Hello World!] but found []
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at org.testng.Assert.assertEquals(Assert.java:585)
-	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:32)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1568586734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1568586734'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: finish (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Harshgiris-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1443:65db:e9e5:27c7%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 700e89ee5cb671d23fd727a814f140bb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitFor(BasePageObject.java:53)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitForVisibilityOf(BasePageObject.java:61)
+	at com.herokuapp.theinternet.pages.DynamicLoadingExample1Page.waitForText(DynamicLoadingExample1Page.java:20)
+	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,7 +130,7 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
 </pre></div></td>
-<td>1</td>
+<td>8</td>
 <td>com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@14ec4505</td></tr>
 </table><p>
 </body>

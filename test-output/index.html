@@ -128,14 +128,24 @@
                   <a name="negativeTest">
                   </a> <!-- negativeTest -->
                   <span class="method-name">negativeTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Hello World!] but found []
-	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:32)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: finish (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Harshgiris-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1443:65db:e9e5:27c7%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 700e89ee5cb671d23fd727a814f140bb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitFor(BasePageObject.java:53)
+	at com.herokuapp.theinternet.pages.BasePageObject.waitForVisibilityOf(BasePageObject.java:61)
+	at com.herokuapp.theinternet.pages.DynamicLoadingExample1Page.waitForText(DynamicLoadingExample1Page.java:20)
+	at com.herokuapp.theinternet.loginpagetests.NegativeLoginTests.negativeTest(NegativeLoginTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-... Removed 23 stack frames
+... Removed 18 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -214,12 +224,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'negativeTest')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.NegativeLoginTests')
-data.setCell(0, 3, 1061);
+data.setCell(0, 3, 8749);
 window.suiteTableData['Negative_Test_Suite']= { tableData: data, tableDiv: 'times-div-Negative_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Negative_Test_Suite">
               </div> <!-- times-div-Negative_Test_Suite -->
             </div> <!-- times-div -->
@@ -258,18 +268,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@1f0f1111)</span>
+                <span class="method-name">setUp(chrome, org.testng.TestRunner@670002)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">negativeTest</span>
-                <span class="method-start">4840 ms</span>
+                <span class="method-start">7000 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">5905 ms</span>
+                <span class="method-start">15752 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

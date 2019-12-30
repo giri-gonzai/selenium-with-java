@@ -31,31 +31,30 @@ public class BasePageObject {
 	
 	//Click on the locator
 	protected void click(By locator) {
-		waitForVisibilotyOf(locator, 10);
+		waitForVisibilityOf(locator, 10);
 		find(locator).click();
 	}
 	
 	//Type - Input in the text field by locator
 	protected void type(String text, By locator) {
-		waitForVisibilotyOf(locator, 5);
+		waitForVisibilityOf(locator, 5);
 		find(locator).sendKeys(text);
 	}
 	
 	/*
-	 * //View - Method for Explicit Wait for an element to be visible protected void
-	 * waitForElement(By locator) { waitForVisibilotyOf(locator, 5);
-	 * find(locator).isDisplayed(); }
+	 * protected void wait(By locator) {
+	 * waitFor(ExpectedConditions.visibilityOf(locator)); }
 	 */
 	
 	//Method for Expected Conditions
-	private void waitFor(ExpectedCondition <WebElement> condition, Integer timeOutInSeconds) {
+	protected void waitFor(ExpectedCondition <WebElement> condition, Integer timeOutInSeconds) {
 		timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds : 30;
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(condition);
 	}
 
 	//Method for waitForVisibilityOf
-	private void waitForVisibilotyOf(By locator, Integer... timeOutInSeconds) {
+	protected void waitForVisibilityOf(By locator, Integer... timeOutInSeconds) {
 		int attempts = 0;
 		while (attempts < 2) {
 			try {

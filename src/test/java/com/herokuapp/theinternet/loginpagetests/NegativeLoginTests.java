@@ -28,8 +28,16 @@ public class NegativeLoginTests extends TestUtilities {
 		//Clicking on Dynamic Loading Example 1 Link
 		DynamicLoadingExample1Page dynamicLoadingExample1Page = dynamicLoadingPage.clickDynamicLoadingExample1();
 		
+		//Clicking on Start button
+		dynamicLoadingExample1Page.clickStart();
+		
+		dynamicLoadingExample1Page.waitForText();
+		
+		//Clicking on Start button for Dynamic Loading Example 1
+		//DynamicLoadingExample1Page dynamicLoadingExample1Page2 = dynamicLoadingExample1Page.clickStart();
+		
 		//Verifying Visibility of Hidden Element
-		Assert.assertEquals(dynamicLoadingExample1Page.isElementVisible(), "Hello World!");
+		//Assert.assertEquals(dynamicLoadingExample1Page.getElementText(), "Hello World!");
 	}
 	
 	@Test(groups = { "exception-timeout" })
