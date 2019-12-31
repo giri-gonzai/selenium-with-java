@@ -9,6 +9,7 @@ public class WelcomePageObject extends BasePageObject {
 	private String pageUrl = "https://the-internet.herokuapp.com/";	
 	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
 	private By dyanmicLoadingLinkLocator = By.xpath("//a[@href='/dynamic_loading']");
+	private By dynamicControlLinkLocator = By.xpath("//a[@href='/dynamic_controls']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -38,6 +39,12 @@ public class WelcomePageObject extends BasePageObject {
 		log.info("Clicking on Dynamic Loading Link");
 		click(dyanmicLoadingLinkLocator);
 		return new DynamicLoadingPage(driver, log);
+	}
+	
+	public DynamicControlPage clickDynamicControlLink() {
+		log.info("Clicking on Dynamic Control Link");
+		click(dynamicControlLinkLocator);
+		return new DynamicControlPage(driver, log);
 	}
 
 }

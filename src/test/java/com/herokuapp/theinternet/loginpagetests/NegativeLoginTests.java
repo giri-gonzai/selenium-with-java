@@ -9,16 +9,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.DynamicControlPage;
 import com.herokuapp.theinternet.pages.DynamicLoadingExample1Page;
 import com.herokuapp.theinternet.pages.DynamicLoadingPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class NegativeLoginTests extends TestUtilities {
-
-	@Test(groups = { "pom-negative-test" } )
-	public void negativeTest() {
+	
+	@Test(groups = { "explicit-wait" } )
+	public void negativeTestExplicitWait() {
 		log.info("Starting Negative Tests: ");
 		
+		//Opening the Web App Home Page
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.OpenPage();
 		
@@ -31,47 +33,36 @@ public class NegativeLoginTests extends TestUtilities {
 		//Clicking on Start button
 		dynamicLoadingExample1Page.clickStart();
 		
+		//Waiting for the hidden element to be visible
 		dynamicLoadingExample1Page.waitForText();
 		
+		//Getting the hidden element text
 		dynamicLoadingExample1Page.getElementText();
 		
-		//Clicking on Start button for Dynamic Loading Example 1
-		//DynamicLoadingExample1Page dynamicLoadingExample1Page2 = dynamicLoadingExample1Page.clickStart();
-		
-		//Verifying Visibility of Hidden Element
 		Assert.assertEquals(dynamicLoadingExample1Page.getElementText(), "Hello World!");
 	}
 	
-	@Test(groups = { "exception-timeout" })
-	public void dynamic_Loading_Timeout() {
-
-		// Navigate to Dynamic Loading page
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_loading']")).click();
-		pageTitle();
-
-		// Navigate to Locator Page
-		driver.findElement(By.xpath("//div[@id='content']//a[@href='/dynamic_loading/1']")).click();
-		pageTitle();
-
-		// Locate the Start button
-		driver.findElement(By.xpath("//div[@id='start']/button[.='Start']")).click();
-		pageTitle();
-
-		// Verify the 'Hello World'
-		WebElement finishElement = driver.findElement(By.id("finish"));
-
-		// Explicit Wait
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		try {
-			wait.until(ExpectedConditions.visibilityOf(finishElement));
-		} catch (TimeoutException exception) {
-			log.info("Timeout Exception captured: " + exception.getMessage());
-		}
-		String finishText = finishElement.getText();
-		Assert.assertEquals(finishText, "Hello World!", "Exception: The actual value is not as the expected value");
+	@Test(groups = { "stale-element-test" }) 
+	public void negativeTestStaleElement() {
+		log.info("Starting Negative Test for Stale Element Test");
 		
-		closeUp();
+		//Opening the Web App Home Page
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Clicking on the Dynamic Control Link
+		DynamicControlPage dynamicControlPage = welcomePage.clickDynamicControlLink();
+		
+		//Selecting the CheckBox Element
+		dynamicControlPage.clickCheckbox();
+		
+		//Clicking on the Remove Button
+		dynamicControlPage.removeCheckbox();
+		
+		//Waiting for Checkbox to be removed
+		dynamicControlPage.checkboxRemoved();
 	}
+	
 
 	@Test(groups = { "exception-stale-element-test" })
 	public void stale_Element_Test_Exception() {
