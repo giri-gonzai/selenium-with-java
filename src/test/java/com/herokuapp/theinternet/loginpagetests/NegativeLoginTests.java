@@ -61,6 +61,11 @@ public class NegativeLoginTests extends TestUtilities {
 		
 		//Waiting for Checkbox to be removed
 		dynamicControlPage.checkboxRemoved();
+		
+		//Verifying the Checkbox Element is not visible
+		Assert.assertTrue(dynamicControlPage.isCheckedBoxVisible(), "Checkbox is visible");
+		
+		//Verifying the Text Returned from Removing Checkbox
 	}
 	
 

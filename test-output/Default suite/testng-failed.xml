@@ -6,8 +6,10 @@
       <class name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
         <methods>
           <include name="closeUp"/>
-          <include name="dynamic_Loading_Timeout"/>
           <include name="setUp"/>
+          <include name="negativeTestStaleElement"/>
+          <include name="stale_Element_Test_Exception"/>
+          <include name="negativeTestExplicitWait"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests -->
     </classes>

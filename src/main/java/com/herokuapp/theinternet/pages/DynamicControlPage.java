@@ -1,8 +1,11 @@
 package com.herokuapp.theinternet.pages;
 
+import java.util.List;
+
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class DynamicControlPage extends BasePageObject{
 
@@ -13,6 +16,13 @@ public class DynamicControlPage extends BasePageObject{
 	public DynamicControlPage(WebDriver driver, Logger log) {
 		super(driver, log);
 	}
+
+	public boolean clickCheckbox() {
+		log.info("Clicking on Checkbox Tick");
+		click(checkboxLocator);
+		log.info("Checkbox ticked");
+		return find(checkboxLocator).isSelected();
+	}
 	
 	public DynamicControlPage removeCheckbox() {
 		log.info("Clicking on Remove Button");
@@ -21,17 +31,23 @@ public class DynamicControlPage extends BasePageObject{
 		return new DynamicControlPage(driver, log);
 	}
 	
-	public boolean clickCheckbox() {
-		log.info("Clicking on Checkbox Tick");
-		click(checkboxLocator);
-		log.info("Checkbox ticked");
-		return find(checkboxLocator).isSelected();
-	}
-	
 	public void checkboxRemoved() {
 		log.info("Waiting for the checkbox to be removed");
 		waitForVisibilityOf(checkboxRemovedMessageLocator, 5);
 		log.info("Checkbox Removed");
+	}
+	
+	public boolean isCheckedBoxVisible() {
+		log.info("Verifying if the checkbox is visible");
+		List<WebElement> checkboxes = findAll(checkboxLocator);
+		for (WebElement checkboxLocator : checkboxes) {
+			if (!checkboxLocator.isDisplayed()) {
+				log.info("Checkbix is visible");
+				return false;
+			}
+		}
+		log.info("Checkbox is not visible");
+		return true;
 	}
 
 }
