@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class DynamicLoadingExample1Page extends BasePageObject {
 
-	private By dynamicLoadingExample1StartLocator = By.id("start");
-	private By dynamicLoadingExample1HiddenElementLocator = By.id("finish");
+	private By dynamicLoadingExample1StartLocator = By.tagName("button");
+	private By dynamicLoadingExample1HiddenElementLocator = By.xpath("//div[@id='finish']");
 
 	public DynamicLoadingExample1Page(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -22,6 +22,7 @@ public class DynamicLoadingExample1Page extends BasePageObject {
 	public void waitForText() {
 		log.info("Waiting for hidden element to be visible");
 		waitForVisibilityOf(dynamicLoadingExample1HiddenElementLocator, 7);
+		log.info("Hidden element loaded");
 	}
 
 	public String getElementText() {
