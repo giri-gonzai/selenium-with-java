@@ -16,7 +16,7 @@
 		</classes>
 	</test> -->
 
-	<test name="Stale_Element_Exception">
+	<!-- <test name="Stale_Element_Exception">
 		<groups>
 			<run>
 				<include name="stale-element-test" />
@@ -29,22 +29,22 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 
-	<!-- <test name="Disabled_Element_Exception">
+	<test name="Disabled_Element_Exception">
 		<groups>
 			<run>
-				<include name="exception-disabled-test" />
+				<include name="disabled-element-test" />
 			</run>
 		</groups>
 		<classes>
 			<class
 				name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
 				<methods>
-					<include name="disabled_Element_Exception" />
+					<include name="negativeTestDisabledElement" />
 				</methods>
 			</class>
 		</classes>
-	</test> -->
+	</test>
 	
 </suite>

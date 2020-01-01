@@ -48,11 +48,6 @@ public class BasePageObject {
 		find(locator).sendKeys(text);
 	}
 	
-	/*
-	 * protected void wait(By locator) {
-	 * waitFor(ExpectedConditions.visibilityOf(locator)); }
-	 */
-	
 	//Method for Expected Conditions
 	protected void waitFor(ExpectedCondition <WebElement> condition, Integer timeOutInSeconds) {
 		timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds : 30;

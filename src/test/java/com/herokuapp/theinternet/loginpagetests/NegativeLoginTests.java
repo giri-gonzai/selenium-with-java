@@ -30,6 +30,9 @@ public class NegativeLoginTests extends TestUtilities {
 		// Clicking on Dynamic Loading Example 1 Link
 		DynamicLoadingExample1Page dynamicLoadingExample1Page = dynamicLoadingPage.clickDynamicLoadingExample1();
 
+		//Getting Page Title
+		pageTitle();
+		
 		// Clicking on Start button
 		dynamicLoadingExample1Page.clickStart();
 
@@ -55,6 +58,9 @@ public class NegativeLoginTests extends TestUtilities {
 
 		// Clicking on the Dynamic Control Link
 		DynamicControlPage dynamicControlPage = welcomePage.clickDynamicControlLink();
+		
+		//Gettting Page Title
+		pageTitle();
 
 		// Selecting the CheckBox Element
 		dynamicControlPage.clickCheckbox();
@@ -79,36 +85,40 @@ public class NegativeLoginTests extends TestUtilities {
 		closeUp();
 	}
 
-	@Test(groups = { "exception-disabled-test" })
-	public void disabled_Element_Exception() {
-
-		// Navigating to Dynamic Control Page
-		driver.findElement(By.xpath("//div[@id='content']/ul//a[@href='/dynamic_controls']")).click();
-
-		// Calling Test Utilities Function
+	@Test( groups = { "disabled-element-test" })
+	public void negativeTestDisabledElement() {
+		log.info("Starting Negative Test for Disabled Element Test");
+		
+		// Opening the Web App Home Page
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		// Clicking on the Dynamic Control Link
+		DynamicControlPage dynamicControlPage = welcomePage.clickDynamicControlLink();
+		
+		//Getting Page Title
 		pageTitle();
-
-		// Define the web elements
-		WebElement enableButton = driver.findElement(By.xpath("//button[contains(text(), 'Enable')]"));
-		WebElement textField = driver.findElement(By.xpath("(//input)[2]"));
-
-		// Click on Enable button
-		enableButton.click();
-
-		// Wait for the text field to be enabled
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-		// Verify the text field is enabled
-		wait.until(ExpectedConditions.elementToBeClickable(textField));
-
-		// Input text into enabled text field
-		textField.sendKeys("Text field is enabled");
-
-		// Verify the text by getText() against the entered text
-		Assert.assertEquals(textField.getAttribute("value"), "Text field is enabled");
-
+		
+		//Verifying Textbox is disabled
+		dynamicControlPage.isTextboxEnabled();
+		
+		//Click on Enable
+		dynamicControlPage.clickEnableButton();
+		
+		//Wait for the Textbox to be enabled
+		dynamicControlPage.isDisableButtonVisible();
+		
+		//Sendkeys into enabled Textbox
+		dynamicControlPage.inputText("Input Text onto Textbox");
+		
+		//Verify the text sent to Textbox
+		String actualEnteredText = ("Input Text onto Textbox");
+		String expectedEnteredText = dynamicControlPage.getEnteredMessage();
+		Assert.assertTrue(actualEnteredText.contains(expectedEnteredText),
+				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
+						+ expectedEnteredText + "\nactualSucessMessage" + actualEnteredText);
+		
+		//Terminate the Browser Instance
 		closeUp();
-
 	}
-
 }

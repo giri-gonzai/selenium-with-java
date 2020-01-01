@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Negative_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Negative_Test_Suite" title="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests" class="method navigator-link" hash-for-method="negativeTestStaleElement">negativeTestStaleElement</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Negative_Test_Suite" title="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests" class="method navigator-link" hash-for-method="negativeTestDisabledElement">negativeTestDisabledElement</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Negative_Test_Suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeTestStaleElement">
-                  </a> <!-- negativeTestStaleElement -->
-                  <span class="method-name">negativeTestStaleElement</span>
+                  <a name="negativeTestDisabledElement">
+                  </a> <!-- negativeTestDisabledElement -->
+                  <span class="method-name">negativeTestDisabledElement</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,20 +142,20 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Negative_Test_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Stale_Element_Exception&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Disabled_Element_Exception&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;stale-element-test&quot;/&gt;
+        &lt;include name=&quot;disabled-element-test&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.NegativeLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;negativeTestStaleElement&quot;/&gt;
+          &lt;include name=&quot;negativeTestDisabledElement&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Stale_Element_Exception --&gt;
+  &lt;/test&gt; &lt;!-- Disabled_Element_Exception --&gt;
 &lt;/suite&gt; &lt;!-- Negative_Test_Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +167,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Stale_Element_Exception (1 class)</span>
+                <span class="test-name">Disabled_Element_Exception (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,10 +178,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">stale-element-test</span>
+              <span class="test-group-name">disabled-element-test</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">negativeTestStaleElement</span>
+                <span class="method-in-group-name">negativeTestDisabledElement</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -203,9 +203,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'negativeTestStaleElement')
+data.setCell(0, 1, 'negativeTestDisabledElement')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.NegativeLoginTests')
-data.setCell(0, 3, 4452);
+data.setCell(0, 3, 4544);
 window.suiteTableData['Negative_Test_Suite']= { tableData: data, tableDiv: 'times-div-Negative_Test_Suite'}
 return data;
 }
@@ -231,9 +231,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.herokuapp.theinternet.loginpagetests.NegativeLoginTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">negativeTestExplicitWait</span>
+                <span class="ignored-method-name">negativeTestStaleElement</span>
                 <br/>
-                <span class="ignored-method-name">disabled_Element_Exception</span>
+                <span class="ignored-method-name">negativeTestExplicitWait</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -251,12 +251,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeTestStaleElement</span>
-                <span class="method-start">5334 ms</span>
+                <span class="method-name">negativeTestDisabledElement</span>
+                <span class="method-start">5300 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">9789 ms</span>
+                <span class="method-start">9847 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
