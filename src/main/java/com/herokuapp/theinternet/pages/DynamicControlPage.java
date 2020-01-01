@@ -49,5 +49,9 @@ public class DynamicControlPage extends BasePageObject{
 		log.info("Checkbox is not visible");
 		return true;
 	}
+	
+	public String getSuccessMessage() {
+		return find(checkboxRemovedMessageLocator).getText();
+	}
 
 }
