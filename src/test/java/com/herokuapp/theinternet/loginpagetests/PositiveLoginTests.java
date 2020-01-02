@@ -105,6 +105,9 @@ public class PositiveLoginTests extends TestUtilities {
 		JavaScriptAlertPage javascriptAlertPage = new JavaScriptAlertPage(driver, log);
 		javascriptAlertPage.clickJSAlert();
 		
+		//Getting the text from the Alert
+		javascriptAlertPage.getAlertText();
+		
 		//Clicking the JS Accept Alert
 		javascriptAlertPage.acceptJSAlert();
 		

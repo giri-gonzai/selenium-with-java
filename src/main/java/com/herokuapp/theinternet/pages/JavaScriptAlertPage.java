@@ -35,6 +35,14 @@ public class JavaScriptAlertPage extends BasePageObject{
 		click(javascriptPromptButtonLocator);
 	}
 
+	//Method for Getting the text from Alert
+	public String getAlertText() {
+		log.info("Getting the text from the alert");
+		Alert alert = switchToAlert();
+		String alertText = alert.getText();
+		log.info("The text from alert box is: " + alertText);
+		return alertText;
+	}
 	
 	//Method for getting the Result Text
 	public String getResultText() {

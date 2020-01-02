@@ -2,15 +2,15 @@
 <testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T03:30:27 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T03:30:33 NZDT" duration-ms="6011">
+  <suite started-at="2020-01-03T12:30:43 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T12:30:48 NZDT" duration-ms="5458">
     <groups>
       <group name="javascript-alert-test">
         <method signature="PositiveLoginTests.jsAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" name="jsAlertTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
       </group> <!-- javascript-alert-test -->
     </groups>
-    <test started-at="2020-01-03T03:30:27 NZDT" name="JavaScript_Alert_Test" finished-at="2020-01-03T03:30:33 NZDT" duration-ms="6011">
+    <test started-at="2020-01-03T12:30:43 NZDT" name="JavaScript_Alert_Test" finished-at="2020-01-03T12:30:48 NZDT" duration-ms="5458">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T03:30:27 NZDT" name="setUp" finished-at="2020-01-03T03:30:32 NZDT" duration-ms="4985" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:30:43 NZDT" name="setUp" finished-at="2020-01-03T12:30:47 NZDT" duration-ms="4435" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="jsAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T03:30:32 NZDT" name="jsAlertTest" finished-at="2020-01-03T03:30:33 NZDT" duration-ms="904" status="FAIL">
+        <test-method signature="jsAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:30:47 NZDT" name="jsAlertTest" finished-at="2020-01-03T12:30:48 NZDT" duration-ms="904" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#id"}
@@ -35,8 +35,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Harshgiris-MacBook-Pro.local', ip: 'fe80:0:0:0:1443:65db:e9e5:27c7%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:56018}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8756ea15863edc3b5ae1379281b48b6a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:60174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 750cff6a0edec1c121ea7655329c600f
 *** Element info: {Using=id, value=id}]]>
             </message>
             <full-stacktrace>
@@ -46,8 +46,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Harshgiris-MacBook-Pro.local', ip: 'fe80:0:0:0:1443:65db:e9e5:27c7%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:56018}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8756ea15863edc3b5ae1379281b48b6a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:60174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 750cff6a0edec1c121ea7655329c600f
 *** Element info: {Using=id, value=id}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -65,8 +65,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.ja
 at org.openqa.selenium.By$ById.findElement(By.java:188)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at com.herokuapp.theinternet.pages.BasePageObject.find(BasePageObject.java:32)
-at com.herokuapp.theinternet.pages.JavaScriptAlertPage.getResultText(JavaScriptAlertPage.java:41)
-at com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.jsAlertTest(PositiveLoginTests.java:112)
+at com.herokuapp.theinternet.pages.JavaScriptAlertPage.getResultText(JavaScriptAlertPage.java:49)
+at com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.jsAlertTest(PositiveLoginTests.java:115)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,7 +101,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jsAlertTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T03:30:33 NZDT" name="closeUp" finished-at="2020-01-03T03:30:33 NZDT" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:30:48 NZDT" name="closeUp" finished-at="2020-01-03T12:30:48 NZDT" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
