@@ -8,5 +8,4 @@ public class TestUtilities extends BaseTest{
 		String Title = driver.getTitle();
 		log.info("The title of the page is: " + Title);
 		}
-
 }

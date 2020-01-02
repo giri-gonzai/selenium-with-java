@@ -10,7 +10,7 @@ public class JavaScriptAlertPage extends BasePageObject{
 	private By javascriptAlertButtonLocator = By.xpath("//button[text()='Click for JS Alert']");
 	private By javascriptConfirmButtonLocator = By.xpath("//button[text()='Click for JS Confirm']");
 	private By javascriptPromptButtonLocator = By.xpath("//button[text()='Click for JS Prompt']");
-	private By javascriptResultLocator = By.id("id");
+	private By javascriptResultLocator = By.id("result");
 	
 	public JavaScriptAlertPage(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -35,6 +35,7 @@ public class JavaScriptAlertPage extends BasePageObject{
 		click(javascriptPromptButtonLocator);
 	}
 
+	//Code
 	//Method for Getting the text from Alert
 	public String getAlertText() {
 		log.info("Getting the text from the alert");

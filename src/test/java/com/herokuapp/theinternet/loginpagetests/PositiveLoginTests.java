@@ -107,6 +107,7 @@ public class PositiveLoginTests extends TestUtilities {
 		
 		//Getting the text from the Alert
 		javascriptAlertPage.getAlertText();
+		//sleep(1000);
 		
 		//Clicking the JS Accept Alert
 		javascriptAlertPage.acceptJSAlert();
