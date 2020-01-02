@@ -1,11 +1,11 @@
 package com.herokuapp.theinternet.loginpagetests;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.CheckboxesPage;
+import com.herokuapp.theinternet.pages.DropDownPage;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
@@ -63,6 +63,30 @@ public class PositiveLoginTests extends TestUtilities {
 		//Assertion
 		Assert.assertTrue(checkboxesPage.isAllCheckboxesSelected(), "All checkboxes are not selected");
 		//Terminating the browser instance
+		closeUp();
+	}
+	
+	@Test( groups = { "dropdown-menu-test" })
+	public void dropdownTest() {
+		log.info("Starting Positive Test: DropDown Page");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Click on Dropdown Link
+		welcomePage.clickDropDownLink();
+		
+		//Get Page Title
+		pageTitle();
+		
+		//Select Option 2 from Dropdown menu
+		DropDownPage dropdownPage = new DropDownPage(driver, log);
+		dropdownPage.selectDropDownOption(2);
+		
+		//Returning the option selected previously
+		dropdownPage.getSelectedDropDownOption();
+		
+		//Terminating Browser Instance
 		closeUp();
 	}
 

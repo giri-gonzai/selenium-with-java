@@ -18,7 +18,7 @@
 		</classes>
 	</test> -->
 
-	<test name="Checkbox_Selection_Test">
+	<!-- <test name="Checkbox_Selection_Test">
 		<groups>
 			<run>
 				<include name="checkboxes-test" />
@@ -29,6 +29,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="checkboxesTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="Dropdown_Menu_Test">
+		<groups>
+			<run>
+				<include name="dropdown-menu-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="dropdownTest" />
 				</methods>
 			</class>
 		</classes>
