@@ -12,6 +12,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By dynamicControlLinkLocator = By.xpath("//a[@href='/dynamic_controls']");
 	private By checkboxesLinkLocator = By.xpath("//a[@href='/checkboxes']");
 	private By dropdownLinkLocator = By.xpath("//a[@href='/dropdown']");
+	private By javascriptAlertLinkLocator = By.xpath("//a[@href='/javascript_alerts']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -62,5 +63,12 @@ public class WelcomePageObject extends BasePageObject {
 		log.info("Clicking on Dropdown Link");
 		click(dropdownLinkLocator);
 		return new DropDownPage(driver, log);
+	}
+	
+	//Click on JavaScript Alert Link
+	public JavaScriptAlertPage clickJavaScriptLink() {
+		log.info("Clicking on JavaScript Alert Link");
+		click(javascriptAlertLinkLocator);
+		return new JavaScriptAlertPage(driver, log);
 	}
 }
