@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-01T19:45:22 NZDT" name="Negative_Test_Suite" finished-at="2020-01-01T19:45:32 NZDT" duration-ms="9879">
+  <suite started-at="2020-01-02T16:45:13 NZDT" name="Positive_Login_Suite" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="6057">
     <groups>
-      <group name="disabled-element-test">
-        <method signature="NegativeLoginTests.negativeTestDisabledElement()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@780cb77]" name="negativeTestDisabledElement" class="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests"/>
-      </group> <!-- disabled-element-test -->
+      <group name="checkboxes-test">
+        <method signature="PositiveLoginTests.checkboxesTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" name="checkboxesTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
+      </group> <!-- checkboxes-test -->
     </groups>
-    <test started-at="2020-01-01T19:45:22 NZDT" name="Disabled_Element_Exception" finished-at="2020-01-01T19:45:32 NZDT" duration-ms="9879">
-      <class name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@780cb77]" started-at="2020-01-01T19:45:22 NZDT" name="setUp" finished-at="2020-01-01T19:45:27 NZDT" duration-ms="5300" status="PASS">
+    <test started-at="2020-01-02T16:45:13 NZDT" name="Checkbox_Selection_Test" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="6057">
+      <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:13 NZDT" name="setUp" finished-at="2020-01-02T16:45:18 NZDT" duration-ms="5057" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,22 +19,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6d2a209c]]>
+                <![CDATA[org.testng.TestRunner@1d01dfa5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="negativeTestDisabledElement()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@780cb77]" started-at="2020-01-01T19:45:27 NZDT" name="negativeTestDisabledElement" finished-at="2020-01-01T19:45:32 NZDT" duration-ms="4544" status="PASS">
+        <test-method signature="checkboxesTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:18 NZDT" name="checkboxesTest" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="972" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- negativeTestDisabledElement -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.NegativeLoginTests@780cb77]" started-at="2020-01-01T19:45:32 NZDT" name="closeUp" finished-at="2020-01-01T19:45:32 NZDT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkboxesTest -->
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:19 NZDT" name="closeUp" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
-      </class> <!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests -->
-    </test> <!-- Disabled_Element_Exception -->
-  </suite> <!-- Negative_Test_Suite -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
+    </test> <!-- Checkbox_Selection_Test -->
+  </suite> <!-- Positive_Login_Suite -->
 </testng-results>

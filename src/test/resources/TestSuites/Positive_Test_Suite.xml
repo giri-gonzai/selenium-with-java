@@ -2,7 +2,12 @@
 
 <suite name="Positive_Login_Suite" verbose="1">
 
-	<test name="Positive_Login_Test">
+	<!-- <test name="Positive_Login_Test">
+		<groups>
+			<run>
+				<include name="login-test" />
+			</run>
+		</groups>
 		<classes>
 			<class
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
@@ -11,5 +16,22 @@
 				</methods>
 			</class>
 		</classes>
+	</test> -->
+
+	<test name="Checkbox_Selection_Test">
+		<groups>
+			<run>
+				<include name="checkboxes-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="checkboxesTest" />
+				</methods>
+			</class>
+		</classes>
 	</test>
+
 </suite>

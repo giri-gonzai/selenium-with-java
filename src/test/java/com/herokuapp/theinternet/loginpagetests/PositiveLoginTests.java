@@ -4,15 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
+import com.herokuapp.theinternet.pages.CheckboxesPage;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class PositiveLoginTests extends TestUtilities {
 
-	@Test
+	@Test(groups = { "login-test" })
 	public void logInTest() {
-		log.info("Starting Positive Test: ");
+		log.info("Starting Positive Test: Login Flow ");
 
 		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
 		welcomePage.OpenPage();
@@ -35,6 +36,31 @@ public class PositiveLoginTests extends TestUtilities {
 		Assert.assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),
 				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
 						+ expectedSuccessMessage + "\nactualSucessMessage" + actualSuccessMessage);
+	}
+	
+	@Test(groups = { "checkboxes-test" })
+	public void checkboxesTest() {
+		log.info("Starting Postive Test: Checkboxes Page");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Get page title
+		pageTitle();
+		
+		//Click on Checkboxes Link
+		welcomePage.clickCheckboxesLink();
+		pageTitle();
+		
+		//Clicking all the checkboxes
+		CheckboxesPage checkboxesPage = new CheckboxesPage(driver, log);
+		checkboxesPage.clickAllCheckboxes();
+		
+		//Verifying all the checkboxes are selected
+		checkboxesPage.isAllCheckboxesSelected();
+		
+		//Terminating the browser instance
+		closeUp();
 	}
 
 }
