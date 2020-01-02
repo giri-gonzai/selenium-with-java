@@ -1,5 +1,6 @@
 package com.herokuapp.theinternet.loginpagetests;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -59,6 +60,8 @@ public class PositiveLoginTests extends TestUtilities {
 		//Verifying all the checkboxes are selected
 		checkboxesPage.isAllCheckboxesSelected();
 		
+		//Assertion
+		Assert.assertTrue(checkboxesPage.isAllCheckboxesSelected(), "All checkboxes are not selected");
 		//Terminating the browser instance
 		closeUp();
 	}

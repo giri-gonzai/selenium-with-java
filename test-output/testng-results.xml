@@ -2,15 +2,15 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-02T16:45:13 NZDT" name="Positive_Login_Suite" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="6057">
+  <suite started-at="2020-01-02T17:02:36 NZDT" name="Positive_Login_Suite" finished-at="2020-01-02T17:02:42 NZDT" duration-ms="5795">
     <groups>
       <group name="checkboxes-test">
         <method signature="PositiveLoginTests.checkboxesTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" name="checkboxesTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
       </group> <!-- checkboxes-test -->
     </groups>
-    <test started-at="2020-01-02T16:45:13 NZDT" name="Checkbox_Selection_Test" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="6057">
+    <test started-at="2020-01-02T17:02:36 NZDT" name="Checkbox_Selection_Test" finished-at="2020-01-02T17:02:42 NZDT" duration-ms="5795">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:13 NZDT" name="setUp" finished-at="2020-01-02T16:45:18 NZDT" duration-ms="5057" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T17:02:36 NZDT" name="setUp" finished-at="2020-01-02T17:02:41 NZDT" duration-ms="4772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,18 +19,18 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@1d01dfa5]]>
+                <![CDATA[org.testng.TestRunner@6b410923]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkboxesTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:18 NZDT" name="checkboxesTest" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="972" status="PASS">
+        <test-method signature="checkboxesTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T17:02:41 NZDT" name="checkboxesTest" finished-at="2020-01-02T17:02:42 NZDT" duration-ms="989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkboxesTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T16:45:19 NZDT" name="closeUp" finished-at="2020-01-02T16:45:19 NZDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@16aa0a0a]" started-at="2020-01-02T17:02:42 NZDT" name="closeUp" finished-at="2020-01-02T17:02:42 NZDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
