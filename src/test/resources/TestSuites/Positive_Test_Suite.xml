@@ -34,7 +34,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="Dropdown_Menu_Test">
+	<!-- <test name="Dropdown_Menu_Test">
 		<groups>
 			<run>
 				<include name="dropdown-menu-test" />
@@ -45,6 +45,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="dropdownTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="JavaScript_Alert_Test">
+		<groups>
+			<run>
+				<include name="javascript-alert-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="jsAlertTest" />
 				</methods>
 			</class>
 		</classes>

@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.CheckboxesPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
+import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
@@ -87,6 +88,30 @@ public class PositiveLoginTests extends TestUtilities {
 		dropdownPage.getSelectedDropDownOption();
 		
 		//Terminating Browser Instance
+		closeUp();
+	}
+	
+	@Test( groups = { "javascript-alert-test" })
+	public void jsAlertTest() {
+		log.info("Starting Positive Test: JavaScript Alert");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Opening the JS Alert Link
+		welcomePage.clickJavaScriptLink();
+		
+		//Clicking on JS Alert
+		JavaScriptAlertPage javascriptAlertPage = new JavaScriptAlertPage(driver, log);
+		javascriptAlertPage.clickJSAlert();
+		
+		//Clicking the JS Accept Alert
+		javascriptAlertPage.acceptJSAlert();
+		
+		//Getting the Text Result
+		javascriptAlertPage.getResultText();
+		
+		//Terminating browser instance
 		closeUp();
 	}
 

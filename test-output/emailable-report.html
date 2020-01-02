@@ -9,10 +9,33 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Positive_Login_Suite</th></tr>
-<tr><td><a href="#t0">Dropdown_Menu_Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,008</td><td>dropdown-menu-test</td><td></td></tr>
+<tr><td><a href="#t0">JavaScript_Alert_Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,011</td><td>javascript-alert-test</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Positive_Login_Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dropdown_Menu_Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</td><td><a href="#m0">dropdownTest</a></td><td rowspan="1">1577947016777</td><td rowspan="1">976</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Positive_Login_Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">JavaScript_Alert_Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</td><td><a href="#m0">jsAlertTest</a></td><td rowspan="1">1577975432404</td><td rowspan="1">904</td></tr></tbody>
 </table>
-<h2>Dropdown_Menu_Test</h2><h3 id="m0">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests#dropdownTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>JavaScript_Alert_Test</h2><h3 id="m0">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests#jsAlertTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#id&quot;}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Harshgiris-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1443:65db:e9e5:27c7%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:56018}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8756ea15863edc3b5ae1379281b48b6a
+*** Element info: {Using=id, value=id}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.herokuapp.theinternet.pages.BasePageObject.find(BasePageObject.java:32)
+	at com.herokuapp.theinternet.pages.JavaScriptAlertPage.getResultText(JavaScriptAlertPage.java:41)
+	at com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.jsAlertTest(PositiveLoginTests.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

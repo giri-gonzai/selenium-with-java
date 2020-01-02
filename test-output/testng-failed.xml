@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Positive_Login_Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Checkbox_Selection_Test(failed)">
+  <test thread-count="5" name="JavaScript_Alert_Test(failed)">
     <groups>
       <run>
-        <include name="checkboxes-test"/>
+        <include name="javascript-alert-test"/>
       </run>
     </groups>
     <classes>
@@ -12,9 +12,9 @@
         <methods>
           <include name="closeUp"/>
           <include name="setUp"/>
-          <include name="checkboxesTest"/>
+          <include name="jsAlertTest"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
     </classes>
-  </test> <!-- Checkbox_Selection_Test(failed) -->
+  </test> <!-- JavaScript_Alert_Test(failed) -->
 </suite> <!-- Failed suite [Positive_Login_Suite] -->
