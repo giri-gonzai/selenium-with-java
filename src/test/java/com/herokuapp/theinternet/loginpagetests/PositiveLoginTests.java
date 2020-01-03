@@ -148,5 +148,38 @@ public class PositiveLoginTests extends TestUtilities {
 		//Terminating browser instance
 		closeUp();
 	}
+	
+	@Test( groups = { "javascript-prompt-alert-test" })
+	public void jsPromptAlertTest() {
+		log.info("Starting Positive Test: JavaScript Alert");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Opening the JS Alert Link
+		welcomePage.clickJavaScriptLink();
+		
+		//Clicking on JS Alert
+		JavaScriptAlertPage javascriptAlertPage = new JavaScriptAlertPage(driver, log);
+		javascriptAlertPage.clickJSPrompt();
+		
+		//Getting the text from the Alert
+		javascriptAlertPage.getAlertText();
+		
+		//Entering text onto JS Prompt Alert Textbox
+		javascriptAlertPage.enterJSPromptText("Text is entered");
+		
+		//Clicking on Cancel/Dismiss the JS Confirm Alert
+		//javascriptAlertPage.dismissJSConfirm();
+		
+		//Clicking the JS Accept Alert
+		javascriptAlertPage.acceptJSAlert();
+		
+		//Getting the Text Result
+		javascriptAlertPage.getResultText();
+		
+		//Terminating browser instance
+		closeUp();
+	}
 
 }

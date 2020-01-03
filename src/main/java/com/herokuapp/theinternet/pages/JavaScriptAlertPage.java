@@ -67,5 +67,14 @@ public class JavaScriptAlertPage extends BasePageObject{
 		alert.dismiss();
 		log.info("The JS Confirm Alert is dismissed or cancelled");
 	}
+	
+	//Method for sending/inputing Text onto JS Prompt Alert
+	public String enterJSPromptText(String promptText) {
+		log.info("Enter the text to be entered on JS Prompt Alert");
+		Alert alert = switchToAlert();
+		alert.sendKeys(promptText);
+		log.info("Text to be entered is: " + promptText);
+		return promptText;
+	}
 
 }

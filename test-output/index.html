@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Positive_Login_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="jsConfirmAlertTest">jsConfirmAlertTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="jsPromptAlertTest">jsPromptAlertTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Positive_Login_Suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="jsConfirmAlertTest">
-                  </a> <!-- jsConfirmAlertTest -->
-                  <span class="method-name">jsConfirmAlertTest</span>
+                  <a name="jsPromptAlertTest">
+                  </a> <!-- jsPromptAlertTest -->
+                  <span class="method-name">jsPromptAlertTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,20 +142,20 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Positive_Login_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;JavaScript_Confirm_Alert_Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;JavaScript_Prompt_Alert_Test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;javascript-confirm-alert-test&quot;/&gt;
+        &lt;include name=&quot;javascript-prompt-alert-test&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.PositiveLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;jsConfirmAlertTest&quot;/&gt;
+          &lt;include name=&quot;jsPromptAlertTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- JavaScript_Confirm_Alert_Test --&gt;
+  &lt;/test&gt; &lt;!-- JavaScript_Prompt_Alert_Test --&gt;
 &lt;/suite&gt; &lt;!-- Positive_Login_Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +167,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">JavaScript_Confirm_Alert_Test (1 class)</span>
+                <span class="test-name">JavaScript_Prompt_Alert_Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,10 +178,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">javascript-confirm-alert-test</span>
+              <span class="test-group-name">javascript-prompt-alert-test</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">jsConfirmAlertTest</span>
+                <span class="method-in-group-name">jsPromptAlertTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -203,9 +203,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'jsConfirmAlertTest')
+data.setCell(0, 1, 'jsPromptAlertTest')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.PositiveLoginTests')
-data.setCell(0, 3, 1076);
+data.setCell(0, 3, 1014);
 window.suiteTableData['Positive_Login_Suite']= { tableData: data, tableDiv: 'times-div-Positive_Login_Suite'}
 return data;
 }
@@ -225,13 +225,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Positive_Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">dropdownTest</span>
+                <br/>
+                <span class="ignored-method-name">jsConfirmAlertTest</span>
                 <br/>
                 <span class="ignored-method-name">logInTest</span>
                 <br/>
@@ -251,16 +253,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@5eccd3b9)</span>
+                <span class="method-name">setUp(chrome, org.testng.TestRunner@61e45f87)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">jsConfirmAlertTest</span>
-                <span class="method-start">4385 ms</span>
+                <span class="method-name">jsPromptAlertTest</span>
+                <span class="method-start">4560 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">5464 ms</span>
+                <span class="method-start">5576 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
