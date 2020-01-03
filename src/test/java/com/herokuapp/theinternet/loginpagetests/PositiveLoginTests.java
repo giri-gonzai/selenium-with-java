@@ -14,6 +14,7 @@ import com.herokuapp.theinternet.pages.WelcomePageObject;
 
 public class PositiveLoginTests extends TestUtilities {
 
+	//Test for Positive Login Authentication
 	@Test(groups = { "login-test" })
 	public void logInTest() {
 		log.info("Starting Positive Test: Login Flow ");
@@ -41,6 +42,7 @@ public class PositiveLoginTests extends TestUtilities {
 						+ expectedSuccessMessage + "\nactualSucessMessage" + actualSuccessMessage);
 	}
 	
+	//Test for Handling Checkbox
 	@Test(groups = { "checkboxes-test" })
 	public void checkboxesTest() {
 		log.info("Starting Postive Test: Checkboxes Page");
@@ -68,6 +70,7 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 	
+	//Test for Handling Dropdown Menu 
 	@Test( groups = { "dropdown-menu-test" })
 	public void dropdownTest() {
 		log.info("Starting Positive Test: DropDown Page");
@@ -92,6 +95,7 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 	
+	//Test for Handling JavaScript Alert
 	@Test( groups = { "javascript-alert-test" })
 	public void jsAlertTest() {
 		log.info("Starting Positive Test: JavaScript Alert");
@@ -120,6 +124,7 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 	
+	//Test for Handling JavaScript Confirm Alert Type
 	@Test( groups = { "javascript-confirm-alert-test" })
 	public void jsConfirmAlertTest() {
 		log.info("Starting Positive Test: JavaScript Alert");
@@ -150,6 +155,7 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 	
+	//Test for Handling JavaScript Prompt Alert Type
 	@Test( groups = { "javascript-prompt-alert-test" })
 	public void jsPromptAlertTest() {
 		log.info("Starting Positive Test: JavaScript Alert");
@@ -183,6 +189,7 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 	
+	//Test for Handling Multiple Windows
 	@Test( groups = { "multiple-window-test" })
 	public void multipleWindowTest() {
 		log.info("Starting Positive Test: Multiple Window");
