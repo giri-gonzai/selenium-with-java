@@ -137,10 +137,10 @@ public class PositiveLoginTests extends TestUtilities {
 		javascriptAlertPage.getAlertText();
 		
 		//Clicking on Cancel/Dismiss the JS Confirm Alert
-		javascriptAlertPage.dismissJSConfirm();
+		//javascriptAlertPage.dismissJSConfirm();
 		
 		//Clicking the JS Accept Alert
-		//javascriptAlertPage.acceptJSAlert();
+		javascriptAlertPage.acceptJSAlert();
 		
 		//Getting the Text Result
 		javascriptAlertPage.getResultText();
