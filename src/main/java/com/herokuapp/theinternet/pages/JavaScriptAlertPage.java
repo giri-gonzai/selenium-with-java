@@ -59,5 +59,13 @@ public class JavaScriptAlertPage extends BasePageObject{
 		alert.accept();
 		log.info("JS Alert is accepted");
 	}
+	
+	//Method for Cancel/Dismiss JS Confirm Alert
+	public void dismissJSConfirm() {
+		log.info("Clicking on Cancel on JS Confirm Alert");
+		Alert alert = switchToAlert();
+		alert.dismiss();
+		log.info("The JS Confirm Alert is dismissed or cancelled");
+	}
 
 }

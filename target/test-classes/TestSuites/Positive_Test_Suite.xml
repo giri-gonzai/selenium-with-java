@@ -50,7 +50,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="JavaScript_Alert_Test">
+	<!-- <test name="JavaScript_Alert_Test">
 		<groups>
 			<run>
 				<include name="javascript-alert-test" />
@@ -61,6 +61,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="jsAlertTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="JavaScript_Confirm_Alert_Test">
+		<groups>
+			<run>
+				<include name="javascript-confirm-alert-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="jsConfirmAlertTest" />
 				</methods>
 			</class>
 		</classes>

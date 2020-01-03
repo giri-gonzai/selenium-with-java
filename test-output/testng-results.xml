@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T12:53:43 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T12:53:48 NZDT" duration-ms="5512">
+  <suite started-at="2020-01-03T13:02:16 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T13:02:22 NZDT" duration-ms="5616">
     <groups>
-      <group name="javascript-alert-test">
-        <method signature="PositiveLoginTests.jsAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" name="jsAlertTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
-      </group> <!-- javascript-alert-test -->
+      <group name="javascript-confirm-alert-test">
+        <method signature="PositiveLoginTests.jsConfirmAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@50a7bc6e]" name="jsConfirmAlertTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
+      </group> <!-- javascript-confirm-alert-test -->
     </groups>
-    <test started-at="2020-01-03T12:53:43 NZDT" name="JavaScript_Alert_Test" finished-at="2020-01-03T12:53:48 NZDT" duration-ms="5512">
+    <test started-at="2020-01-03T13:02:16 NZDT" name="JavaScript_Confirm_Alert_Test" finished-at="2020-01-03T13:02:22 NZDT" duration-ms="5616">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:53:43 NZDT" name="setUp" finished-at="2020-01-03T12:53:47 NZDT" duration-ms="4471" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@50a7bc6e]" started-at="2020-01-03T13:02:16 NZDT" name="setUp" finished-at="2020-01-03T13:02:21 NZDT" duration-ms="4591" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,22 +19,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@4e558728]]>
+                <![CDATA[org.testng.TestRunner@5eccd3b9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="jsAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:53:47 NZDT" name="jsAlertTest" finished-at="2020-01-03T12:53:48 NZDT" duration-ms="1011" status="PASS">
+        <test-method signature="jsConfirmAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@50a7bc6e]" started-at="2020-01-03T13:02:21 NZDT" name="jsConfirmAlertTest" finished-at="2020-01-03T13:02:22 NZDT" duration-ms="996" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jsAlertTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@691a7f8f]" started-at="2020-01-03T12:53:48 NZDT" name="closeUp" finished-at="2020-01-03T12:53:48 NZDT" duration-ms="1" status="PASS">
+        </test-method> <!-- jsConfirmAlertTest -->
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@50a7bc6e]" started-at="2020-01-03T13:02:22 NZDT" name="closeUp" finished-at="2020-01-03T13:02:22 NZDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
-    </test> <!-- JavaScript_Alert_Test -->
+    </test> <!-- JavaScript_Confirm_Alert_Test -->
   </suite> <!-- Positive_Login_Suite -->
 </testng-results>
