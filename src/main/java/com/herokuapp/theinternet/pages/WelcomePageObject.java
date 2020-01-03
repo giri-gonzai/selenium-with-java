@@ -13,6 +13,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By checkboxesLinkLocator = By.xpath("//a[@href='/checkboxes']");
 	private By dropdownLinkLocator = By.xpath("//a[@href='/dropdown']");
 	private By javascriptAlertLinkLocator = By.xpath("//a[@href='/javascript_alerts']");
+	private By multipleWindowsLinkLocator = By.xpath("//a[@href='/windows']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -70,5 +71,12 @@ public class WelcomePageObject extends BasePageObject {
 		log.info("Clicking on JavaScript Alert Link");
 		click(javascriptAlertLinkLocator);
 		return new JavaScriptAlertPage(driver, log);
+	}
+	
+	//Clicking on Multiple Windows Link
+	public MultipleWindowsPage clickMultipleWindowsLink() {
+		log.info("Clicking on Multiple Windows Link");
+		click(multipleWindowsLinkLocator);
+		return new MultipleWindowsPage(driver, log);
 	}
 }

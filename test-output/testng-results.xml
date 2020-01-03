@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T13:17:25 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="5527">
+  <suite started-at="2020-01-03T18:21:52 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="8849">
     <groups>
-      <group name="javascript-prompt-alert-test">
-        <method signature="PositiveLoginTests.jsPromptAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" name="jsPromptAlertTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
-      </group> <!-- javascript-prompt-alert-test -->
+      <group name="multiple-window-test">
+        <method signature="PositiveLoginTests.multipleWindowTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" name="multipleWindowTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
+      </group> <!-- multiple-window-test -->
     </groups>
-    <test started-at="2020-01-03T13:17:25 NZDT" name="JavaScript_Prompt_Alert_Test" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="5527">
+    <test started-at="2020-01-03T18:21:52 NZDT" name="Multiple_Window_Test" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="8849">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:25 NZDT" name="setUp" finished-at="2020-01-03T13:17:29 NZDT" duration-ms="4481" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:21:52 NZDT" name="setUp" finished-at="2020-01-03T18:21:59 NZDT" duration-ms="7423" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,22 +19,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@61e45f87]]>
+                <![CDATA[org.testng.TestRunner@3eb631b8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="jsPromptAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:29 NZDT" name="jsPromptAlertTest" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="1020" status="PASS">
+        <test-method signature="multipleWindowTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:21:59 NZDT" name="multipleWindowTest" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="1394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jsPromptAlertTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:30 NZDT" name="closeUp" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="0" status="PASS">
+        </test-method> <!-- multipleWindowTest -->
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:22:01 NZDT" name="closeUp" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
-    </test> <!-- JavaScript_Prompt_Alert_Test -->
+    </test> <!-- Multiple_Window_Test -->
   </suite> <!-- Positive_Login_Suite -->
 </testng-results>

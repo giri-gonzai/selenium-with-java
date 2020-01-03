@@ -1,6 +1,8 @@
 package com.herokuapp.theinternet.pages;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
@@ -76,9 +78,32 @@ public class BasePageObject {
 	}
 	
 	//Method for Switching to Alert
-	public Alert switchToAlert() {
+	protected Alert switchToAlert() {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.alertIsPresent());
 		return driver.switchTo().alert();
+	}
+	
+	//Method to Switching to new window tab with title
+	protected void switchToWindowWithTitle(String expectedTitle) {
+		
+		//Getting the window handle of current window
+		String firstWindow = driver.getWindowHandle();
+		
+		//Switching to new window handle
+		Set<String> allWindows = driver.getWindowHandles();
+		Iterator<String> windowIterator = allWindows.iterator();
+		
+		while (windowIterator.hasNext()) {
+			String windowHandle = windowIterator.next().toString();
+			
+			if(!windowHandle.equals(firstWindow)) {
+				driver.switchTo().window(windowHandle);
+				
+				if(getCurrentUrl().contains(expectedTitle)) {
+					break;
+				}
+			}
+		}
 	}
 }

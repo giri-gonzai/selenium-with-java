@@ -8,6 +8,7 @@ import com.herokuapp.theinternet.pages.CheckboxesPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
 import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.LoginPage;
+import com.herokuapp.theinternet.pages.MultipleWindowsPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
 
@@ -177,6 +178,33 @@ public class PositiveLoginTests extends TestUtilities {
 		
 		//Getting the Text Result
 		javascriptAlertPage.getResultText();
+		
+		//Terminating browser instance
+		closeUp();
+	}
+	
+	@Test( groups = { "multiple-window-test" })
+	public void multipleWindowTest() {
+		log.info("Starting Positive Test: Multiple Window");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Opening the JS Alert Link
+		welcomePage.clickMultipleWindowsLink();
+		
+		//Get Page Title & URL
+		pageTitle();
+		
+		//Clicking on JS Alert
+		MultipleWindowsPage multipleWindowPage = new MultipleWindowsPage(driver, log);
+		multipleWindowPage.openNewWindowButton();
+		
+		//Switch to new window
+		multipleWindowPage.switchToNewWindow();
+		
+		//Get Page title of the new window
+		pageTitle();
 		
 		//Terminating browser instance
 		closeUp();
