@@ -2,15 +2,15 @@
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T13:14:08 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T13:14:13 NZDT" duration-ms="5601">
+  <suite started-at="2020-01-03T13:17:25 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="5527">
     <groups>
       <group name="javascript-prompt-alert-test">
         <method signature="PositiveLoginTests.jsPromptAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" name="jsPromptAlertTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
       </group> <!-- javascript-prompt-alert-test -->
     </groups>
-    <test started-at="2020-01-03T13:14:08 NZDT" name="JavaScript_Prompt_Alert_Test" finished-at="2020-01-03T13:14:13 NZDT" duration-ms="5601">
+    <test started-at="2020-01-03T13:17:25 NZDT" name="JavaScript_Prompt_Alert_Test" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="5527">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:14:08 NZDT" name="setUp" finished-at="2020-01-03T13:14:12 NZDT" duration-ms="4559" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:25 NZDT" name="setUp" finished-at="2020-01-03T13:17:29 NZDT" duration-ms="4481" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="jsPromptAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:14:12 NZDT" name="jsPromptAlertTest" finished-at="2020-01-03T13:14:13 NZDT" duration-ms="1014" status="PASS">
+        <test-method signature="jsPromptAlertTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:29 NZDT" name="jsPromptAlertTest" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="1020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jsPromptAlertTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:14:13 NZDT" name="closeUp" finished-at="2020-01-03T13:14:13 NZDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@161b062a]" started-at="2020-01-03T13:17:30 NZDT" name="closeUp" finished-at="2020-01-03T13:17:30 NZDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
