@@ -1,11 +1,13 @@
 package com.herokuapp.theinternet.loginpagetests;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.CheckboxesPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
+import com.herokuapp.theinternet.pages.FramePage;
 import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.MultipleWindowsPage;
@@ -217,4 +219,34 @@ public class PositiveLoginTests extends TestUtilities {
 		closeUp();
 	}
 
+	//Test for Frames
+	@Test( groups = { "iframe-test" })
+	public void iFrameTest() {
+		log.info("Starting Positive Test: Frames");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Opening the Frames Link
+		welcomePage.clickFrameLink();
+		
+		//Get Page Title & URL
+		pageTitle();
+
+		//Clicking on iFrames Link
+		FramePage framePage = new FramePage(driver, log);
+		framePage.clickiFramesLink();
+		
+		//Clicking on Nested Frames Link
+		//framePage.clickNestedFramesLink();
+		
+		//Get Page Title
+		pageTitle();
+		
+		//Activating the IFrame Content
+		framePage.activateIFrame("IFrame is activated");
+		
+		//Clicking on File within IFrame
+		framePage.clickIFrameFileButton();
+	}
 }

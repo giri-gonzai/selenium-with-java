@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T18:21:52 NZDT" name="Positive_Login_Suite" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="8849">
+  <suite started-at="2020-01-07T22:45:58 NZDT" name="Positive_Login_Suite" finished-at="2020-01-07T22:46:06 NZDT" duration-ms="7104">
     <groups>
-      <group name="multiple-window-test">
-        <method signature="PositiveLoginTests.multipleWindowTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" name="multipleWindowTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
-      </group> <!-- multiple-window-test -->
+      <group name="iframe-test">
+        <method signature="PositiveLoginTests.iFrameTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@53ca01a2]" name="iFrameTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
+      </group> <!-- iframe-test -->
     </groups>
-    <test started-at="2020-01-03T18:21:52 NZDT" name="Multiple_Window_Test" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="8849">
+    <test started-at="2020-01-07T22:45:58 NZDT" name="Frame_Test" finished-at="2020-01-07T22:46:06 NZDT" duration-ms="7104">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:21:52 NZDT" name="setUp" finished-at="2020-01-03T18:21:59 NZDT" duration-ms="7423" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@53ca01a2]" started-at="2020-01-07T22:45:59 NZDT" name="setUp" finished-at="2020-01-07T22:46:04 NZDT" duration-ms="5150" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,22 +19,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@3eb631b8]]>
+                <![CDATA[org.testng.TestRunner@17ae7628]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="multipleWindowTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:21:59 NZDT" name="multipleWindowTest" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="1394" status="PASS">
+        <test-method signature="iFrameTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@53ca01a2]" started-at="2020-01-07T22:46:04 NZDT" name="iFrameTest" finished-at="2020-01-07T22:46:06 NZDT" duration-ms="1833" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- multipleWindowTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@17c1bced]" started-at="2020-01-03T18:22:01 NZDT" name="closeUp" finished-at="2020-01-03T18:22:01 NZDT" duration-ms="1" status="PASS">
+        </test-method> <!-- iFrameTest -->
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@53ca01a2]" started-at="2020-01-07T22:46:06 NZDT" name="closeUp" finished-at="2020-01-07T22:46:06 NZDT" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
-    </test> <!-- Multiple_Window_Test -->
+    </test> <!-- Frame_Test -->
   </suite> <!-- Positive_Login_Suite -->
 </testng-results>
