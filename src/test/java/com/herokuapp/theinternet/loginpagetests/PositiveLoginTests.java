@@ -246,6 +246,12 @@ public class PositiveLoginTests extends TestUtilities {
 		//Activating the IFrame Content
 		framePage.activateIFrame("IFrame is activated");
 		
+		//Enter text onto IFrame Text Field
+		framePage.enterTextIFrame("Selenium Test for text onto iFrame");
+		
+		//Getting the text entered from iFrame text field
+		framePage.getEnteredTextIFrame();
+		
 		//Clicking on File within IFrame
 		framePage.clickIFrameFileButton();
 	}

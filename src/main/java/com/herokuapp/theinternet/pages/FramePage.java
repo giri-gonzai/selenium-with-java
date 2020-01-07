@@ -10,6 +10,7 @@ public class FramePage extends BasePageObject{
 	private By nestedFrameLinkLocator = By.xpath("//a[@href='/nested_frames']");
 	private By iFrameContentLocator = By.id("mceu_13");
 	private By iFrameFileLocator = By.id("mceu_15");
+	private By iFrameTextAreaLocator = By.id("tinymce");
 	
 	public FramePage(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -41,5 +42,17 @@ public class FramePage extends BasePageObject{
 	public void clickIFrameFileButton() {
 		log.info("Clicking on File within IFrame content");
 		click(iFrameFileLocator);
+	}
+
+	//Method for entering text into Text Area within iFrame
+	public String enterTextIFrame(String textForIFrame) {
+		log.info("Entering Text onto Text Area");
+		type(textForIFrame, iFrameTextAreaLocator);
+		log.info("Text is entered onto the field");
+		return textForIFrame;
+	}
+	
+	public String getEnteredTextIFrame() {
+		return find(iFrameTextAreaLocator).getText();
 	}
 }
