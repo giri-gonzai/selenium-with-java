@@ -246,8 +246,12 @@ public class PositiveLoginTests extends TestUtilities {
 		//Activating the IFrame Content
 		framePage.activateIFrame("IFrame is activated");
 		
+		//Clearing the pre-populated text onto iFrame Content
+		framePage.clearIFrameTextContent();
+		//Assert.assertThat(framePage.clearIFrameTextContent().getAttribute(), "The content area is not cleared");
+		
 		//Enter text onto IFrame Text Field
-		framePage.enterTextIFrame("Selenium Test for text onto iFrame");
+		framePage.enterIFrameTextContent("Selenium Test for text onto iFrame");
 		
 		//Getting the text entered from iFrame text field
 		framePage.getEnteredTextIFrame();

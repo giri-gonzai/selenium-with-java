@@ -8,8 +8,9 @@ public class FramePage extends BasePageObject{
 
 	private By iFrameLinkLocator = By.xpath("//a[@href='/iframe']");
 	private By nestedFrameLinkLocator = By.xpath("//a[@href='/nested_frames']");
-	private By iFrameContentLocator = By.id("mceu_13");
+	
 	private By iFrameFileLocator = By.id("mceu_15");
+	private By iFrame = By.tagName("iframe");
 	private By iFrameTextAreaLocator = By.id("tinymce");
 	
 	public FramePage(WebDriver driver, Logger log) {
@@ -44,12 +45,20 @@ public class FramePage extends BasePageObject{
 		click(iFrameFileLocator);
 	}
 
+	//Method for clearing the pre-populated text
+	public void clearIFrameTextContent() {
+		log.info("Clearning the text from IFrame Text Content");
+		switchToIFrame(iFrame);
+		find(iFrame).clear();
+	}
+	
 	//Method for entering text into Text Area within iFrame
-	public String enterTextIFrame(String textForIFrame) {
-		log.info("Entering Text onto Text Area");
+	public FramePage enterIFrameTextContent(String textForIFrame) {
+		log.info("Entering Text onto Text Area [" + textForIFrame + "]");
+		switchToIFrame(iFrame);
 		type(textForIFrame, iFrameTextAreaLocator);
 		log.info("Text is entered onto the field");
-		return textForIFrame;
+		return new FramePage(driver, log);
 	}
 	
 	public String getEnteredTextIFrame() {
