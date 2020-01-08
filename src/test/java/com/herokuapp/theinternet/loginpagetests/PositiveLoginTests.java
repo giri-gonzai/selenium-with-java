@@ -286,7 +286,10 @@ public class PositiveLoginTests extends TestUtilities {
 		KeyPressPage keyPressPage = new KeyPressPage(driver, log);
 		keyPressPage.sendKeyPressInput(Keys.RETURN);
 		
-		keyPressPage.sentKeyPressResult();
+		String actualText = keyPressPage.sentKeyPressResult();
+		String expectedText = "You entered: ENTER";
+
+		Assert.assertTrue(actualText.contains(expectedText), "The result text does not match the expected key press result");
 		
 		closeUp();
 	}		

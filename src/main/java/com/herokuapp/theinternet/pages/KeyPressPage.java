@@ -16,7 +16,7 @@ public class KeyPressPage extends BasePageObject{
 	
 	//Method for Entering Keyboard Input
 	public void sendKeyPressInput(Keys value) {
-		log.info("Sending Keyboard: Enter");
+		log.info("Sending Keyboard: " + value.name());
 		keyPressInput(keyPressInputLinkLocator, value);
 	}
 	
