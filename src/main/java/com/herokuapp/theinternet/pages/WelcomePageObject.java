@@ -15,6 +15,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By javascriptAlertLinkLocator = By.xpath("//a[@href='/javascript_alerts']");
 	private By multipleWindowsLinkLocator = By.xpath("//a[@href='/windows']");
 	private By frameLinkLocator = By.xpath("//a[@href='/frames']");
+	private By keyPressLinkLocator = By.xpath("//a[@href='/key_presses']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -86,5 +87,12 @@ public class WelcomePageObject extends BasePageObject {
 		log.info("Clicking on Frames Link");
 		click(frameLinkLocator);
 		return new FramePage(driver, log);
+	}
+
+	//Clicking on Key Press Link
+	public KeyPressPage clickKeyPressLink() {
+		log.info("Clicking on Key Press Link");
+		click(keyPressLinkLocator);
+		return new KeyPressPage(driver, log);
 	}
 }

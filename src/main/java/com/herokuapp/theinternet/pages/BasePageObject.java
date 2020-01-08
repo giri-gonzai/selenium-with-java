@@ -7,6 +7,7 @@ import java.util.Set;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,6 +50,12 @@ public class BasePageObject {
 	protected void type(String text, By locator) {
 		waitForVisibilityOf(locator, 5);
 		find(locator).sendKeys(text);
+	}
+	
+	//Method for Sending Keyboard input
+	protected void keyPressInput(By locator, Keys value) {
+		waitForVisibilityOf(locator, 5);
+		find(locator).sendKeys(Keys.values());
 	}
 	
 	//Method for Expected Conditions

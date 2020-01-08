@@ -114,7 +114,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="Frame_Test">
+	<!-- <test name="Frame_Test">
 		<groups>
 			<run>
 				<include name="iframe-test" />
@@ -125,6 +125,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="iFrameTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="KeyPress_Test">
+		<groups>
+			<run>
+				<include name="keypress-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="keyPressTest" />
 				</methods>
 			</class>
 		</classes>
