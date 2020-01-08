@@ -8,10 +8,12 @@ public class FramePage extends BasePageObject {
 
 	private By iFrameLinkLocator = By.xpath("//a[@href='/iframe']");
 	private By nestedFrameLinkLocator = By.xpath("//a[@href='/nested_frames']");
-
-	private By iFrameFileLocator = By.id("mceu_15-open");
 	private By iFrame = By.tagName("iframe");
 	private By iFrameTextAreaLocator = By.id("tinymce");
+	private By iFrameMenuFileLocator = By.id("mceu_15-open");
+	private By iFrameMenuEditLocator = By.id("mceu_16-open");
+	private By iFrameMenuViewLocator = By.id("mceu_17-open");
+	private By iFrameMenuFormatLocator = By.id("mceu_18-open");
 
 	public FramePage(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -59,10 +61,27 @@ public class FramePage extends BasePageObject {
 	}
 
 	// Clicking on File within IFrame
-	public void clickIFrameFileButton() {
+	public void checkIFrameMenu() {
 		switchOutOfIFrame();
+		
+		//Clicking File Option
 		log.info("Clicking on File within IFrame content");
-		click(iFrameFileLocator);
+		click(iFrameMenuFileLocator);
 		log.info("File link was opened");
+		
+		//Clicking Edit Option
+		log.info("Clicking on Edit within IFrame content");
+		click(iFrameMenuEditLocator);
+		log.info("Edit link was opened");
+		
+		//Clicking View Option
+		log.info("Clicking on View within IFrame content");
+		click(iFrameMenuViewLocator);
+		log.info("View link was opened");
+		
+		//Clicking Format Option
+		log.info("Clicking on Format within IFrame content");
+		click(iFrameMenuFormatLocator);
+		log.info("Format link was opened");
 	}
 }

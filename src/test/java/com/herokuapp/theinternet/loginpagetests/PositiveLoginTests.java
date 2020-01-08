@@ -260,7 +260,7 @@ public class PositiveLoginTests extends TestUtilities {
 		Assert.assertTrue(actualEnteredText.contains(expectedEnteredText), "The actual entered text is different than expected text");
 		
 		//Clicking on File within IFrame
-		framePage.clickIFrameFileButton();
+		framePage.checkIFrameMenu();
 		
 		//Terminating the browser instance
 		closeUp();
