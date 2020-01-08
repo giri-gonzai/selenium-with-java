@@ -111,4 +111,9 @@ public class BasePageObject {
 	protected void switchToIFrame(By frameLocator) {
 		driver.switchTo().frame(find(frameLocator));
 	}
+	
+	//Method to Switch out of iFrame
+	protected void switchOutOfIFrame() {
+		driver.switchTo().defaultContent();
+	}
 }
