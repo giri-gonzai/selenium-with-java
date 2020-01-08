@@ -281,16 +281,21 @@ public class PositiveLoginTests extends TestUtilities {
 		//Clicking on the Key Presses Link
 		welcomePage.clickKeyPressLink();
 		
+		//Getting the Page Title
 		pageTitle();
 		
+		//Initializing page object for to invoke the key press event
 		KeyPressPage keyPressPage = new KeyPressPage(driver, log);
 		keyPressPage.sendKeyPressInput(Keys.RETURN);
 		
+		//Assigning variables to capture the Expected & Actual Test Result
 		String actualText = keyPressPage.sentKeyPressResult();
 		String expectedText = "You entered: ENTER";
-
+		
+		//Validating the Expected & Actual Test Result by comparing the variables via Assertions
 		Assert.assertTrue(actualText.contains(expectedText), "The result text does not match the expected key press result");
 		
+		//Terminating the browser instance
 		closeUp();
 	}		
 }
