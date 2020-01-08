@@ -34,8 +34,8 @@ public class FramePage extends BasePageObject{
 	//Activating iFrame content
 	public String activateIFrame(String text) {
 		log.info("Activating the IFrame content");
-		waitForVisibilityOf(iFrameContentLocator, 5);
-		click(iFrameContentLocator);
+		waitForVisibilityOf(iFrame, 5);
+		click(iFrame);
 		return text;
 	}
 	
@@ -49,13 +49,12 @@ public class FramePage extends BasePageObject{
 	public void clearIFrameTextContent() {
 		log.info("Clearning the text from IFrame Text Content");
 		switchToIFrame(iFrame);
-		find(iFrame).clear();
+		find(iFrameTextAreaLocator).clear();
 	}
 	
 	//Method for entering text into Text Area within iFrame
 	public FramePage enterIFrameTextContent(String textForIFrame) {
 		log.info("Entering Text onto Text Area [" + textForIFrame + "]");
-		switchToIFrame(iFrame);
 		type(textForIFrame, iFrameTextAreaLocator);
 		log.info("Text is entered onto the field");
 		return new FramePage(driver, log);

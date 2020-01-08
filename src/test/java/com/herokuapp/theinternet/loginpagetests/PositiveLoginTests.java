@@ -255,8 +255,14 @@ public class PositiveLoginTests extends TestUtilities {
 		
 		//Getting the text entered from iFrame text field
 		framePage.getEnteredTextIFrame();
+		String expectedEnteredText = "Selenium Test for text onto iFrame";
+		String actualEnteredText = framePage.getEnteredTextIFrame();
+		Assert.assertTrue(actualEnteredText.contains(expectedEnteredText), "The actual entered text is different than expected text");
 		
 		//Clicking on File within IFrame
 		framePage.clickIFrameFileButton();
+		
+		//Terminating the browser instance
+		closeUp();
 	}
 }
