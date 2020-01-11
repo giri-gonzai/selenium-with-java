@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -56,6 +57,13 @@ public class BasePageObject {
 	protected void keyPressInput(By locator, Keys value) {
 		waitForVisibilityOf(locator, 5);
 		find(locator).sendKeys(Keys.values());
+	}
+	
+	//Method for Sending Keyboard input using Action Class
+	public void keyPressActionInput(Keys value) {
+		log.info("Pressing the key " + value.name() + " using Action class");
+		Actions action = new Actions(driver);
+		action.sendKeys(value).build().perform();
 	}
 	
 	//Method for Expected Conditions

@@ -130,7 +130,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="KeyPress_Test">
+	<!-- <test name="KeyPress_Test">
 		<groups>
 			<run>
 				<include name="keypress-test" />
@@ -141,6 +141,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="keyPressTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="KeyPress_Test">
+		<groups>
+			<run>
+				<include name="keypress-action-testt" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="keyPressActionTest" />
 				</methods>
 			</class>
 		</classes>

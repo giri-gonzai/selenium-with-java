@@ -297,5 +297,33 @@ public class PositiveLoginTests extends TestUtilities {
 		
 		//Terminating the browser instance
 		closeUp();
-	}		
+	}	
+	
+	//Test for Returning Key Press Events using Action Class
+	@Test( groups = { "keypress-action-test" })
+	public void keyPressActionTest() {
+		log.info("Starting Positive Test: Key Presses using Action Class");
+
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Clicking on the Key Presses Link
+		welcomePage.clickKeyPressLink();
+		
+		//Getting the Page Title
+		pageTitle();
+		
+		KeyPressPage keyPressPage = new KeyPressPage(driver, log);
+		keyPressPage.keyPressActionInput(Keys.SPACE);
+		
+		//Assigning variables to capture the Expected & Actual Test Result
+		String actualText = keyPressPage.sentKeyPressResult();
+		String expectedText = "You entered: SPACE";
+		
+		//Validating the Expected & Actual Test Result by comparing the variables via Assertions
+		Assert.assertTrue(actualText.contains(expectedText), "The result text does not match the expected key press result");
+				
+		//Terminating the browser instance
+		closeUp();
+	}
 }

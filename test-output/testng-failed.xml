@@ -4,14 +4,14 @@
   <test thread-count="5" name="KeyPress_Test(failed)">
     <groups>
       <run>
-        <include name="keypress-test"/>
+        <include name="keypress-action-testt"/>
       </run>
     </groups>
     <classes>
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
         <methods>
           <include name="closeUp"/>
-          <include name="keyPressTest"/>
+          <include name="keyPressActionTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->

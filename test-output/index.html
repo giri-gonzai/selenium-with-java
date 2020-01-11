@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Positive_Login_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Positive_Login_Suite</span>
+              <span class="suite-name border-passed">Positive_Login_Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="hide-methods failed suite-Positive_Login_Suite"> (hide)</a> <!-- hide-methods failed suite-Positive_Login_Suite -->
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="show-methods failed suite-Positive_Login_Suite"> (show)</a> <!-- show-methods failed suite-Positive_Login_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Positive_Login_Suite" class="hide-methods passed suite-Positive_Login_Suite"> (hide)</a> <!-- hide-methods passed suite-Positive_Login_Suite -->
+                      <a href="#" panel-name="suite-Positive_Login_Suite" class="show-methods passed suite-Positive_Login_Suite"> (show)</a> <!-- show-methods passed suite-Positive_Login_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Positive_Login_Suite">
+                    <div class="method-list-content passed suite-Positive_Login_Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="keyPressTest">keyPressTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="keyPressActionTest">keyPressActionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Positive_Login_Suite -->
+                    </div> <!-- method-list-content passed suite-Positive_Login_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,26 +117,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Positive_Login_Suite" class="panel Positive_Login_Suite">
-          <div class="suite-Positive_Login_Suite-class-failed">
+          <div class="suite-Positive_Login_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="keyPressTest">
-                  </a> <!-- keyPressTest -->
-                  <span class="method-name">keyPressTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: The result text does not match the expected key press result did not expect to find [true] but found [false]
-	at com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.keyPressTest(PositiveLoginTests.java:292)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
+                  <a name="keyPressActionTest">
+                  </a> <!-- keyPressActionTest -->
+                  <span class="method-name">keyPressActionTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Login_Suite-class-failed -->
+          </div> <!-- suite-Positive_Login_Suite-class-passed -->
         </div> <!-- panel Positive_Login_Suite -->
         <div panel-name="test-xml-Positive_Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -150,13 +145,13 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;KeyPress_Test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;keypress-test&quot;/&gt;
+        &lt;include name=&quot;keypress-action-testt&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.PositiveLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;keyPressTest&quot;/&gt;
+          &lt;include name=&quot;keyPressActionTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests --&gt;
     &lt;/classes&gt;
@@ -183,10 +178,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">keypress-test</span>
+              <span class="test-group-name">keypress-action-test</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">keyPressTest</span>
+                <span class="method-in-group-name">keyPressActionTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -208,14 +203,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'keyPressTest')
+data.setCell(0, 1, 'keyPressActionTest')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.PositiveLoginTests')
-data.setCell(0, 3, 1210);
+data.setCell(0, 3, 957);
 window.suiteTableData['Positive_Login_Suite']= { tableData: data, tableDiv: 'times-div-Positive_Login_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 957 ms</span>
               <div id="times-div-Positive_Login_Suite">
               </div> <!-- times-div-Positive_Login_Suite -->
             </div> <!-- times-div -->
@@ -230,7 +225,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Positive_Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">9 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -243,6 +238,8 @@ return data;
                 <span class="ignored-method-name">jsConfirmAlertTest</span>
                 <br/>
                 <span class="ignored-method-name">logInTest</span>
+                <br/>
+                <span class="ignored-method-name">keyPressTest</span>
                 <br/>
                 <span class="ignored-method-name">jsPromptAlertTest</span>
                 <br/>
@@ -264,18 +261,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@648ee871)</span>
+                <span class="method-name">setUp(chrome, org.testng.TestRunner@4b6ac111)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">keyPressTest</span>
-                <span class="method-start">4649 ms</span>
+                <span class="method-name">keyPressActionTest</span>
+                <span class="method-start">5600 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">5862 ms</span>
+                <span class="method-start">6560 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
