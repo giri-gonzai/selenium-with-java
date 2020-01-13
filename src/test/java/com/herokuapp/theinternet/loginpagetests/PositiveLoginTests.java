@@ -346,12 +346,16 @@ public class PositiveLoginTests extends TestUtilities {
 		//fileUploadPage.chooseFileLink();
 		
 		//Selecting the File
-		fileUploadPage.selectFile("The Great Wave - Hokusai.jpg");
+		String fileName = "The_Great_Wave_Hokusai.jpg";
+		fileUploadPage.selectFile(fileName);
 		
 		//Uploading the file
 		fileUploadPage.uploadFileLink();
 		
 		//Getting the name of the uploaded file
-		fileUploadPage.getUploadedFileName();
+		String uploadedFileNameObject = fileUploadPage.getUploadedFileName();
+		
+		//Adding assertion for the uploaded file
+		Assert.assertTrue(uploadedFileNameObject.contains(fileName), "Our file: (" + uploadedFileNameObject + ") is not the one uploaded (" + uploadedFileNameObject + ") ");
 	}
 }

@@ -9,7 +9,7 @@ public class FileUploadPage extends BasePageObject{
 	private By fileChooseButtonLocator = By.id("file-upload");
 	private By fileUploadButtonLocator = By.id("file-submit");
 	private By successfulFileUploadLocator = By.id("uploaded-files");
-	private By successfulFileUploadTextLocator = By.xpath("//div[@id='content']//h3[.='File Uploaded!']");
+	//private By successfulFileUploadTextLocator = By.xpath("//div[@id='content']//h3[.='File Uploaded!']");
 	
 	public FileUploadPage(WebDriver driver, Logger log) {
 		super(driver, log);
@@ -30,17 +30,15 @@ public class FileUploadPage extends BasePageObject{
 	//Method for selecting the File from File Browser
 	public void selectFile(String fileName) {
 		log.info("Selecting " + fileName + " from the File Folder");
-		String filePath = System.getProperty("user.dir") + "//src//main/resources//Files" + fileName;
+		String filePath = System.getProperty("user.dir") + "/src/main/resources/Files/" + fileName;
 		type(filePath, fileChooseButtonLocator);
 		log.info("File Selected: " + fileName);
 	}
 	
 	//Method for getting the file name of uploaded file
 	public String getUploadedFileName() {
-		log.info("Getting the file is uploaded");
-		waitForVisibilityOf(successfulFileUploadTextLocator, 7);
 		String uploadedFileName = find(successfulFileUploadLocator).getText();
-		log.info("The name of the selected file name is: " +uploadedFileName);
+		log.info("The name of the selected file name is: ", uploadedFileName);
 		return uploadedFileName;
 	}
 }
