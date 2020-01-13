@@ -146,7 +146,7 @@
 		</classes>
 	</test> -->
 	
-	<!-- <test name="KeyPress_Test">
+	<!-- <test name="KeyPress_Action_Test">
 		<groups>
 			<run>
 				<include name="keypress-action-test" />
