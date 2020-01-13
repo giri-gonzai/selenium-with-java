@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.CheckboxesPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
+import com.herokuapp.theinternet.pages.FileUploadPage;
 import com.herokuapp.theinternet.pages.FramePage;
 import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.KeyPressPage;
@@ -325,5 +326,32 @@ public class PositiveLoginTests extends TestUtilities {
 				
 		//Terminating the browser instance
 		closeUp();
+	}
+
+	//Test for File Upload
+	@Test( groups = { "file-upload-test" })
+	public void fileUploadTest() {
+		log.info("Starting Positive Test: Key Presses using Action Class");
+
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Clicking on the Key Presses Link
+		welcomePage.clickFileUploadLink();
+		
+		//Getting the Page Title
+		pageTitle();
+		
+		FileUploadPage fileUploadPage = new FileUploadPage(driver, log);
+		//fileUploadPage.chooseFileLink();
+		
+		//Selecting the File
+		fileUploadPage.selectFile("The Great Wave - Hokusai.jpg");
+		
+		//Uploading the file
+		fileUploadPage.uploadFileLink();
+		
+		//Getting the name of the uploaded file
+		fileUploadPage.getUploadedFileName();
 	}
 }

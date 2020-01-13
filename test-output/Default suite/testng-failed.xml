@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.loginpagetests.NegativeLoginTests">
+      <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
         <methods>
           <include name="closeUp"/>
+          <include name="keyPressTest"/>
+          <include name="fileUploadTest"/>
           <include name="setUp"/>
-          <include name="negativeTestStaleElement"/>
-          <include name="stale_Element_Test_Exception"/>
-          <include name="negativeTestExplicitWait"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.loginpagetests.NegativeLoginTests -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

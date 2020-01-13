@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/resources/Files/The Great Wave - Hokusai.jpg</name>
+			<type>1</type>
+			<location>/Users/giri/Downloads/The Great Wave - Hokusai.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>

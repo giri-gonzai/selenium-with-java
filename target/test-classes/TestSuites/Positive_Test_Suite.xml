@@ -146,10 +146,10 @@
 		</classes>
 	</test> -->
 	
-	<test name="KeyPress_Test">
+	<!-- <test name="KeyPress_Test">
 		<groups>
 			<run>
-				<include name="keypress-action-testt" />
+				<include name="keypress-action-test" />
 			</run>
 		</groups>
 		<classes>
@@ -157,6 +157,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="keyPressActionTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="File_Upload_Test">
+		<groups>
+			<run>
+				<include name="file-upload-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="fileUploadTest" />
 				</methods>
 			</class>
 		</classes>
