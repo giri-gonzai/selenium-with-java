@@ -2,15 +2,15 @@
 <testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-11T20:22:30 NZDT" name="Positive_Login_Suite" finished-at="2020-01-11T20:22:36 NZDT" duration-ms="6588">
+  <suite started-at="2020-01-13T19:23:29 NZDT" name="Positive_Login_Suite" finished-at="2020-01-13T19:23:36 NZDT" duration-ms="6763">
     <groups>
       <group name="keypress-action-test">
         <method signature="PositiveLoginTests.keyPressActionTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" name="keyPressActionTest" class="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests"/>
       </group> <!-- keypress-action-test -->
     </groups>
-    <test started-at="2020-01-11T20:22:30 NZDT" name="KeyPress_Test" finished-at="2020-01-11T20:22:36 NZDT" duration-ms="6588">
+    <test started-at="2020-01-13T19:23:29 NZDT" name="KeyPress_Test" finished-at="2020-01-13T19:23:36 NZDT" duration-ms="6763">
       <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-11T20:22:30 NZDT" name="setUp" finished-at="2020-01-11T20:22:35 NZDT" duration-ms="5599" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-13T19:23:29 NZDT" name="setUp" finished-at="2020-01-13T19:23:35 NZDT" duration-ms="5829" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="keyPressActionTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-11T20:22:35 NZDT" name="keyPressActionTest" finished-at="2020-01-11T20:22:36 NZDT" duration-ms="957" status="PASS">
+        <test-method signature="keyPressActionTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-13T19:23:35 NZDT" name="keyPressActionTest" finished-at="2020-01-13T19:23:36 NZDT" duration-ms="897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keyPressActionTest -->
-        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-11T20:22:36 NZDT" name="closeUp" finished-at="2020-01-11T20:22:36 NZDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3ee0fea4]" started-at="2020-01-13T19:23:36 NZDT" name="closeUp" finished-at="2020-01-13T19:23:36 NZDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUp -->
