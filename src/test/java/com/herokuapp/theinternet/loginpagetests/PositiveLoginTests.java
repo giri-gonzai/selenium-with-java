@@ -358,4 +358,19 @@ public class PositiveLoginTests extends TestUtilities {
 		//Adding assertion for the uploaded file
 		Assert.assertTrue(uploadedFileNameObject.contains(fileName), "Our file: (" + uploadedFileNameObject + ") is not the one uploaded (" + uploadedFileNameObject + ") ");
 	}
+	
+	//Test for JSExecutor Functions
+	@Test( groups = { "javaScript-executor-test" })
+	public void jsExecutorTest() {
+		log.info("Starting Positive Test: JavaScript Executor Test");
+
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		//Using JS Executor BasePageObject to scroll
+		sleep(5000);
+		welcomePage.performJSExecutionMethods();
+		
+		log.info("Executed Scrolling using JSExecutor via Selenium WebDriver");
+	}
 }

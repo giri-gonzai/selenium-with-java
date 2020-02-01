@@ -162,7 +162,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="File_Upload_Test">
+	<!-- <test name="File_Upload_Test">
 		<groups>
 			<run>
 				<include name="file-upload-test" />
@@ -173,6 +173,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="fileUploadTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="JSExecutor_Test">
+		<groups>
+			<run>
+				<include name="javaScript-executor-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="jsExecutorTest" />
 				</methods>
 			</class>
 		</classes>

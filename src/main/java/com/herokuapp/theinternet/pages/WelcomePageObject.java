@@ -17,6 +17,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By frameLinkLocator = By.xpath("//a[@href='/frames']");
 	private By keyPressLinkLocator = By.xpath("//a[@href='/key_presses']");
 	private By fileUploadLinkLocator = By.xpath("//a[@href='/upload']");
+	private By wysisygLinkLocator = By.xpath("//a[@href='/tinymce']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -102,5 +103,13 @@ public class WelcomePageObject extends BasePageObject {
 		log.info("Clicking on File Upload Link");
 		click(fileUploadLinkLocator);
 		return new FileUploadPage(driver, log);
+	}
+	
+	//JSExecutor on WebPage
+	public JavaScriptExecutorPageObject performJSExecutionMethods() {
+		log.info("Performing JS Operations via JavaScript Executor");
+		scrollToBottom();
+		click(wysisygLinkLocator);
+		return new JavaScriptExecutorPageObject(driver, log);
 	}
 }

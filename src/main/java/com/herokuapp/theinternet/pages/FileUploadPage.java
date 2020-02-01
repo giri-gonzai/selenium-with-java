@@ -37,6 +37,7 @@ public class FileUploadPage extends BasePageObject{
 	
 	//Method for getting the file name of uploaded file
 	public String getUploadedFileName() {
+		waitForVisibilityOf(successfulFileUploadLocator, 5);
 		String uploadedFileName = find(successfulFileUploadLocator).getText();
 		log.info("The name of the selected file name is: ", uploadedFileName);
 		return uploadedFileName;

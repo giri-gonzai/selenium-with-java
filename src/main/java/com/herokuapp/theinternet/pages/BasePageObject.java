@@ -7,9 +7,11 @@ import java.util.Set;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -130,5 +132,12 @@ public class BasePageObject {
 	//Method to Switch out of iFrame
 	protected void switchOutOfIFrame() {
 		driver.switchTo().defaultContent();
+	}
+	
+	//JSExecutor Method
+	protected void scrollToBottom() {
+		log.info("Scrolling to bottom of page");
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
 }

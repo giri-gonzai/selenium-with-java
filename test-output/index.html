@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Positive_Login_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Positive_Login_Suite</span>
+              <span class="suite-name border-passed">Positive_Login_Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="hide-methods failed suite-Positive_Login_Suite"> (hide)</a> <!-- hide-methods failed suite-Positive_Login_Suite -->
-                      <a href="#" panel-name="suite-Positive_Login_Suite" class="show-methods failed suite-Positive_Login_Suite"> (show)</a> <!-- show-methods failed suite-Positive_Login_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Positive_Login_Suite" class="hide-methods passed suite-Positive_Login_Suite"> (hide)</a> <!-- hide-methods passed suite-Positive_Login_Suite -->
+                      <a href="#" panel-name="suite-Positive_Login_Suite" class="show-methods passed suite-Positive_Login_Suite"> (show)</a> <!-- show-methods passed suite-Positive_Login_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Positive_Login_Suite">
+                    <div class="method-list-content passed suite-Positive_Login_Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="fileUploadTest">fileUploadTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Login_Suite" title="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests" class="method navigator-link" hash-for-method="jsExecutorTest">jsExecutorTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Positive_Login_Suite -->
+                    </div> <!-- method-list-content passed suite-Positive_Login_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,45 +117,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Positive_Login_Suite" class="panel Positive_Login_Suite">
-          <div class="suite-Positive_Login_Suite-class-failed">
+          <div class="suite-Positive_Login_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="fileUploadTest">
-                  </a> <!-- fileUploadTest -->
-                  <span class="method-name">fileUploadTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
-  (Session info: chrome=79.0.3945.117)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Harshgiris-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:26:cc64:4d10:4ea5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;13.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: /var/folders/ng/938npx5x79q...}, goog:chromeOptions: {debuggerAddress: localhost:49479}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ca92578bda8c34aa9909c14ea9ac496c
-*** Element info: {Using=id, value=uploaded-files}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.herokuapp.theinternet.pages.BasePageObject.find(BasePageObject.java:36)
-	at com.herokuapp.theinternet.pages.FileUploadPage.getUploadedFileName(FileUploadPage.java:40)
-	at com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.fileUploadTest(PositiveLoginTests.java:356)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
+                  <a name="jsExecutorTest">
+                  </a> <!-- jsExecutorTest -->
+                  <span class="method-name">jsExecutorTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Login_Suite-class-failed -->
+          </div> <!-- suite-Positive_Login_Suite-class-passed -->
         </div> <!-- panel Positive_Login_Suite -->
         <div panel-name="test-xml-Positive_Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -166,20 +142,20 @@ Session ID: ca92578bda8c34aa9909c14ea9ac496c
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Positive_Login_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;File_Upload_Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;JSExecutor_Test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;file-upload-test&quot;/&gt;
+        &lt;include name=&quot;javaScript-executor-test&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.loginpagetests.PositiveLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;fileUploadTest&quot;/&gt;
+          &lt;include name=&quot;jsExecutorTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- File_Upload_Test --&gt;
+  &lt;/test&gt; &lt;!-- JSExecutor_Test --&gt;
 &lt;/suite&gt; &lt;!-- Positive_Login_Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,7 +167,7 @@ Session ID: ca92578bda8c34aa9909c14ea9ac496c
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">File_Upload_Test (1 class)</span>
+                <span class="test-name">JSExecutor_Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,10 +178,10 @@ Session ID: ca92578bda8c34aa9909c14ea9ac496c
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">file-upload-test</span>
+              <span class="test-group-name">javaScript-executor-test</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">fileUploadTest</span>
+                <span class="method-in-group-name">jsExecutorTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -227,14 +203,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fileUploadTest')
+data.setCell(0, 1, 'jsExecutorTest')
 data.setCell(0, 2, 'com.herokuapp.theinternet.loginpagetests.PositiveLoginTests')
-data.setCell(0, 3, 2122);
+data.setCell(0, 3, 7299);
 window.suiteTableData['Positive_Login_Suite']= { tableData: data, tableDiv: 'times-div-Positive_Login_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Positive_Login_Suite">
               </div> <!-- times-div-Positive_Login_Suite -->
             </div> <!-- times-div -->
@@ -249,7 +225,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Positive_Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -266,6 +242,8 @@ return data;
                 <span class="ignored-method-name">keyPressActionTest</span>
                 <br/>
                 <span class="ignored-method-name">keyPressTest</span>
+                <br/>
+                <span class="ignored-method-name">fileUploadTest</span>
                 <br/>
                 <span class="ignored-method-name">jsPromptAlertTest</span>
                 <br/>
@@ -287,18 +265,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.loginpagetests.PositiveLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@72458efc)</span>
+                <span class="method-name">setUp(chrome, org.testng.TestRunner@411291e5)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">fileUploadTest</span>
-                <span class="method-start">5370 ms</span>
+                <span class="method-name">jsExecutorTest</span>
+                <span class="method-start">4968 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeUp</span>
-                <span class="method-start">7496 ms</span>
+                <span class="method-start">12269 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
