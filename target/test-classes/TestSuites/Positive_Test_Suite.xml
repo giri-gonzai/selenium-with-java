@@ -178,7 +178,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="JSExecutor_Test">
+	<!-- <test name="JSExecutor_Test">
 		<groups>
 			<run>
 				<include name="javaScript-executor-test" />
@@ -189,6 +189,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="jsExecutorTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="Drag_And_Drop_Test">
+		<groups>
+			<run>
+				<include name="drag-and-drop-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="dragAndDropTest" />
 				</methods>
 			</class>
 		</classes>

@@ -18,6 +18,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By keyPressLinkLocator = By.xpath("//a[@href='/key_presses']");
 	private By fileUploadLinkLocator = By.xpath("//a[@href='/upload']");
 	private By wysisygLinkLocator = By.xpath("//a[@href='/tinymce']");
+	private By dragAndDropLinkLocator = By.xpath("//a[@href='/drag_and_drop']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -111,5 +112,12 @@ public class WelcomePageObject extends BasePageObject {
 		scrollToBottom();
 		click(wysisygLinkLocator);
 		return new JavaScriptExecutorPageObject(driver, log);
+	}
+	
+	//Click on Drag and Drop Link
+	public DragAndDropPage clickDragAndDropLink() {
+		log.info("Clicking on Drag & Drop Link");
+		click(dragAndDropLinkLocator);
+		return new DragAndDropPage(driver, log);
 	}
 }

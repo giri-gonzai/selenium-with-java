@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.CheckboxesPage;
+import com.herokuapp.theinternet.pages.DragAndDropPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
 import com.herokuapp.theinternet.pages.FileUploadPage;
 import com.herokuapp.theinternet.pages.FramePage;
@@ -372,5 +373,30 @@ public class PositiveLoginTests extends TestUtilities {
 		welcomePage.performJSExecutionMethods();
 		
 		log.info("Executed Scrolling using JSExecutor via Selenium WebDriver");
+	}
+	
+	//Test for Drag and Drop
+	@Test( groups = { "drag-and-drop-test" })
+	public void dragAndDropTest() {
+		log.info("Starting Positive Test: Drag and Drop Test");
+
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		welcomePage.clickDragAndDropLink();
+		
+		DragAndDropPage dragAndDropPage = new DragAndDropPage(driver, log);
+		
+		dragAndDropPage.DragAndDropFunction();
+		
+		String ColumnAText = dragAndDropPage.getColumnAText();
+		Assert.assertTrue(ColumnAText.equals("B"), "Column A header should be B, but it is: " + ColumnAText);
+	
+		
+		String ColumnBText = dragAndDropPage.getColumnBText();
+		Assert.assertTrue(ColumnBText.equals("A"), "Column B header should be A, but it is: " + ColumnBText);
+		
+		
+		//sleep(2000);
 	}
 }
