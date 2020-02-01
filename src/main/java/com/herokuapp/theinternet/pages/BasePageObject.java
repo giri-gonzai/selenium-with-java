@@ -145,11 +145,11 @@ public class BasePageObject {
 
 	//Method for Drag and Drop
 	protected void performDragAndDrop(By from, By to) {
-		Actions action = new Actions(driver);
-		action.dragAndDrop(find(from) , find(to)).build().perform();
+		//Actions action = new Actions(driver);
+		//action.dragAndDrop(find(from) , find(to)).build().perform();
 		
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("function createEvent(typeOfEvent) {\n" + "var event =document.createEvent(\"CustomEvent\");\n"
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("function createEvent(typeOfEvent) {\n" + "var event =document.createEvent(\"CustomEvent\");\n"
 				                    + "event.initCustomEvent(typeOfEvent,true, true, null);\n" + "event.dataTransfer = {\n" + "data: {},\n"
 				                    + "setData: function (key, value) {\n" + "this.data[key] = value;\n" + "},\n"
 				                    + "getData: function (key) {\n" + "return this.data[key];\n" + "}\n" + "};\n" + "return event;\n"
