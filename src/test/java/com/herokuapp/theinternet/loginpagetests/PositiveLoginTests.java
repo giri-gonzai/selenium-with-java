@@ -11,6 +11,7 @@ import com.herokuapp.theinternet.pages.DragAndDropPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
 import com.herokuapp.theinternet.pages.FileUploadPage;
 import com.herokuapp.theinternet.pages.FramePage;
+import com.herokuapp.theinternet.pages.HoverOverPage;
 import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.KeyPressPage;
 import com.herokuapp.theinternet.pages.LoginPage;
@@ -398,5 +399,21 @@ public class PositiveLoginTests extends TestUtilities {
 		
 		
 		//sleep(2000);
+	}
+	
+	//Test for Hover Over
+	@Test( groups = { "hover-over-test" })
+	public void hoverOverTest() {
+		log.info("Starting Positive Test: Drag and Drop Test");
+
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		welcomePage.clickHoverOverLink();
+		
+		HoverOverPage hoverOverPage = new HoverOverPage(driver, log);
+		hoverOverPage.openUserProfile(2);
+		
+		closeUp();
 	}
 }

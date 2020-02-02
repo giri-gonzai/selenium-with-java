@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Positive_Login_Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Drag_And_Drop_Test(failed)">
+  <test thread-count="5" name="Hover_Over_Test(failed)">
     <groups>
       <run>
-        <include name="drag-and-drop-test"/>
+        <include name="hover-over-test"/>
       </run>
     </groups>
     <classes>
@@ -12,9 +12,9 @@
         <methods>
           <include name="closeUp"/>
           <include name="setUp"/>
-          <include name="dragAndDropTest"/>
+          <include name="hoverOverTest"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
     </classes>
-  </test> <!-- Drag_And_Drop_Test(failed) -->
+  </test> <!-- Hover_Over_Test(failed) -->
 </suite> <!-- Failed suite [Positive_Login_Suite] -->

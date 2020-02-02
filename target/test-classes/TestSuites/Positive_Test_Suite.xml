@@ -194,7 +194,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="Drag_And_Drop_Test">
+	<!-- <test name="Drag_And_Drop_Test">
 		<groups>
 			<run>
 				<include name="drag-and-drop-test" />
@@ -205,6 +205,22 @@
 				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
 				<methods>
 					<include name="dragAndDropTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="Hover_Over_Test">
+		<groups>
+			<run>
+				<include name="hover-over-test" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+				<methods>
+					<include name="hoverOverTest" />
 				</methods>
 			</class>
 		</classes>

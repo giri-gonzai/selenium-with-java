@@ -19,6 +19,7 @@ public class WelcomePageObject extends BasePageObject {
 	private By fileUploadLinkLocator = By.xpath("//a[@href='/upload']");
 	private By wysisygLinkLocator = By.xpath("//a[@href='/tinymce']");
 	private By dragAndDropLinkLocator = By.xpath("//a[@href='/drag_and_drop']");
+	private By hoversLinkLocator = By.xpath("//a[@href='/hovers']");
 	
 	//Setting Constructor for the POM Class
 	public WelcomePageObject(WebDriver driver, Logger log) {
@@ -120,4 +121,12 @@ public class WelcomePageObject extends BasePageObject {
 		click(dragAndDropLinkLocator);
 		return new DragAndDropPage(driver, log);
 	}
+	
+	//Click on Hover Over Link
+	public HoverOverPage clickHoverOverLink() {
+		log.info("Clicking on Hover Link");
+		click(hoversLinkLocator);
+		return new HoverOverPage(driver, log);
+	}
+	
 }
