@@ -11,6 +11,7 @@ import com.herokuapp.theinternet.pages.DragAndDropPage;
 import com.herokuapp.theinternet.pages.DropDownPage;
 import com.herokuapp.theinternet.pages.FileUploadPage;
 import com.herokuapp.theinternet.pages.FramePage;
+import com.herokuapp.theinternet.pages.HorizontalSliderPage;
 import com.herokuapp.theinternet.pages.HoverOverPage;
 import com.herokuapp.theinternet.pages.JavaScriptAlertPage;
 import com.herokuapp.theinternet.pages.KeyPressPage;
@@ -415,5 +416,27 @@ public class PositiveLoginTests extends TestUtilities {
 		hoverOverPage.openUserProfile(2);
 		
 		closeUp();
+	}
+	
+	//Test for Horizontal Slider
+	@Test( groups = { "horizontal-slider-test" })
+	public void horizontalSliderTest() {
+		log.info("Starting Positive Test: Horizontal Slider Test");
+		
+		WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+		welcomePage.OpenPage();
+		
+		welcomePage.clickHorizontalSliderLink();
+		
+		String value = "3.5";
+		
+		HorizontalSliderPage horizontalSliderPage = new HorizontalSliderPage(driver, log);
+		sleep(2000);
+		horizontalSliderPage.moveHorizontalSliderTo(value);
+		sleep(2000);
+		
+		//Verifying the value of the moved slider
+		String sliderValue = horizontalSliderPage.finalHorizontalSliderValue();
+		Assert.assertTrue(sliderValue.equals(value), "Value of slider is not correct. It is: " + sliderValue);
 	}
 }
